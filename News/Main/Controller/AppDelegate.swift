@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //这是GitHub客户端测试上传
         
+        //这是scourceTree测试上传
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         
         window?.rootViewController = MyTabBarController()
