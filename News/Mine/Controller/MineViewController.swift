@@ -8,26 +8,46 @@
 
 import UIKit
 
-class MineViewController: UIViewController {
 
+class MineViewController: UITableViewController {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        view.backgroundColor = UIColor.white
+        tableView.tableFooterView = UIView()
         
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
+
+//扩展  实现tableview的数据源方法
+extension MineViewController {
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 4
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell_iden")
+        cell.textLabel?.text = "测试"
+        return cell
+    }
+    
+}
 
+//扩展  实现tableview的代理方法
+extension MineViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+    
 }
