@@ -11,6 +11,8 @@ import UIKit
 
 class MineViewController: UITableViewController {
     
+    var sections = [[MyCellModel]]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +21,16 @@ class MineViewController: UITableViewController {
 
         
         //获取我的cell数据
-        NetworkTool.loadMyCellData()
+        NetworkTool.loadMyCellData { (sections) in
+            let string = "{\"text\":\"我的关注\",\"grey_text\":\"\"}"
+            let myConcern = MyCellModel.deserialize(from: string)
+            var myConcerns = [MyCellModel]()
+            myConcerns.append(myConcern!)
+            self.sections.append(myConcerns)
+            self.sections += sections;
+            
+            self.tableView.reloadData()
+        }
     }
     
 
@@ -41,16 +52,18 @@ extension MineViewController{
     
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return sections.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return sections[section].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = "\(indexPath.row)"
+        let section = sections[indexPath.section]
+        let myCellModel = section[indexPath.row]
+        cell.textLabel?.text = myCellModel.text
         return cell
     }
 }

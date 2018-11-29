@@ -14,3 +14,12 @@ let ScreenHeight = UIScreen.main.bounds.size.height
 
 
 
+let BASE_URL = "https://is.snssdk.com"
+
+let device_id : String  = "6096495334"
+
+let IID:String = "5034850950"
+
+
+
+

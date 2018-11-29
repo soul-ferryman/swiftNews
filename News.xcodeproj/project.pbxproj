@@ -18,6 +18,7 @@
 		04D50860219A84B6005DE338 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085C219A84B6005DE338 /* MyTabBarController.swift */; };
 		04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085E219A84B6005DE338 /* AppDelegate.swift */; };
 		04D50867219AB363005DE338 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50866219AB363005DE338 /* MyTabBar.swift */; };
+		04E2C7CF21AF83FD008A8E71 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2C7CE21AF83FD008A8E71 /* MyCellModel.swift */; };
 		04FD9EAE21AB8CB300127FC0 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD9EAD21AB8CB300127FC0 /* Const.swift */; };
 		04FD9EB121AB8E3C00127FC0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD9EB021AB8E3C00127FC0 /* UIColor+Extension.swift */; };
 		04FD9EB421ABCC5100127FC0 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD9EB321ABCC5100127FC0 /* NetworkTool.swift */; };
@@ -59,6 +60,7 @@
 		04D5085C219A84B6005DE338 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		04D5085E219A84B6005DE338 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D50866219AB363005DE338 /* MyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		04E2C7CE21AF83FD008A8E71 /* MyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCellModel.swift; path = "../../../../../git项目/YuJianNew/关心/关心主界面/View/MyCellModel.swift"; sourceTree = "<group>"; };
 		04FD9EAD21AB8CB300127FC0 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		04FD9EB021AB8E3C00127FC0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		04FD9EB321ABCC5100127FC0 /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
@@ -254,8 +256,8 @@
 		04D50849219A8489005DE338 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				04E2C7CD21AF83DD008A8E71 /* model */,
 				04D5084A219A8489005DE338 /* Controller */,
-				04D5084C219A8489005DE338 /* Model */,
 				04D5084D219A8489005DE338 /* View */,
 			);
 			path = Mine;
@@ -267,13 +269,6 @@
 				04D5084B219A8489005DE338 /* MineViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		04D5084C219A8489005DE338 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		04D5084D219A8489005DE338 /* View */ = {
@@ -313,6 +308,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04E2C7CD21AF83DD008A8E71 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				04E2C7CE21AF83FD008A8E71 /* MyCellModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		04FD9EAA21AB8C3700127FC0 /* Other */ = {
@@ -539,6 +542,7 @@
 				04D50859219A8489005DE338 /* MineViewController.swift in Sources */,
 				04D5085F219A84B6005DE338 /* MyNavigationController.swift in Sources */,
 				04D50867219AB363005DE338 /* MyTabBar.swift in Sources */,
+				04E2C7CF21AF83FD008A8E71 /* MyCellModel.swift in Sources */,
 				04D50858219A8489005DE338 /* HomeViewController.swift in Sources */,
 				04D50860219A84B6005DE338 /* MyTabBarController.swift in Sources */,
 				04FD9EAE21AB8CB300127FC0 /* Const.swift in Sources */,
