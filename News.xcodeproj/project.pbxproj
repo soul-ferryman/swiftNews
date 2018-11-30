@@ -19,6 +19,13 @@
 		04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085E219A84B6005DE338 /* AppDelegate.swift */; };
 		04D50867219AB363005DE338 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50866219AB363005DE338 /* MyTabBar.swift */; };
 		04E2C7D221AFE66B008A8E71 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2C7D121AFE66B008A8E71 /* MyCellModel.swift */; };
+		04EC939321B0D99B00440FB0 /* MyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939121B0D99B00440FB0 /* MyOtherCell.swift */; };
+		04EC939421B0D99B00440FB0 /* MyOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EC939221B0D99B00440FB0 /* MyOtherCell.xib */; };
+		04EC939721B10CC400440FB0 /* MyFirstScetionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939521B10CC400440FB0 /* MyFirstScetionCell.swift */; };
+		04EC939821B10CC400440FB0 /* MyFirstScetionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EC939621B10CC400440FB0 /* MyFirstScetionCell.xib */; };
+		04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939921B1119100440FB0 /* UIView+Extension.swift */; };
+		04EC939C21B1125900440FB0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939B21B1125900440FB0 /* UITableView+Extension.swift */; };
+		04EC939E21B1141B00440FB0 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939D21B1141B00440FB0 /* UICollectionView+Extension.swift */; };
 		04FD9EAE21AB8CB300127FC0 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD9EAD21AB8CB300127FC0 /* Const.swift */; };
 		04FD9EB121AB8E3C00127FC0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD9EB021AB8E3C00127FC0 /* UIColor+Extension.swift */; };
 		04FD9EB421ABCC5100127FC0 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD9EB321ABCC5100127FC0 /* NetworkTool.swift */; };
@@ -61,6 +68,13 @@
 		04D5085E219A84B6005DE338 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D50866219AB363005DE338 /* MyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
 		04E2C7D121AFE66B008A8E71 /* MyCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
+		04EC939121B0D99B00440FB0 /* MyOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOtherCell.swift; sourceTree = "<group>"; };
+		04EC939221B0D99B00440FB0 /* MyOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOtherCell.xib; sourceTree = "<group>"; };
+		04EC939521B10CC400440FB0 /* MyFirstScetionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstScetionCell.swift; sourceTree = "<group>"; };
+		04EC939621B10CC400440FB0 /* MyFirstScetionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFirstScetionCell.xib; sourceTree = "<group>"; };
+		04EC939921B1119100440FB0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		04EC939B21B1125900440FB0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		04EC939D21B1141B00440FB0 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		04FD9EAD21AB8CB300127FC0 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		04FD9EB021AB8E3C00127FC0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		04FD9EB321ABCC5100127FC0 /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
@@ -256,9 +270,9 @@
 		04D50849219A8489005DE338 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				04EC939021B0D95A00440FB0 /* View */,
 				04E2C7D021AFE66B008A8E71 /* Model */,
 				04D5084A219A8489005DE338 /* Controller */,
-				04D5084D219A8489005DE338 /* View */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -269,13 +283,6 @@
 				04D5084B219A8489005DE338 /* MineViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		04D5084D219A8489005DE338 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		04D5084E219A8489005DE338 /* Video */ = {
@@ -318,6 +325,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		04EC939021B0D95A00440FB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04EC939121B0D99B00440FB0 /* MyOtherCell.swift */,
+				04EC939221B0D99B00440FB0 /* MyOtherCell.xib */,
+				04EC939521B10CC400440FB0 /* MyFirstScetionCell.swift */,
+				04EC939621B10CC400440FB0 /* MyFirstScetionCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04FD9EAA21AB8C3700127FC0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +348,9 @@
 			isa = PBXGroup;
 			children = (
 				04FD9EB021AB8E3C00127FC0 /* UIColor+Extension.swift */,
+				04EC939921B1119100440FB0 /* UIView+Extension.swift */,
+				04EC939B21B1125900440FB0 /* UITableView+Extension.swift */,
+				04EC939D21B1141B00440FB0 /* UICollectionView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -467,7 +488,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EC939421B0D99B00440FB0 /* MyOtherCell.xib in Resources */,
 				04D50805219A614B005DE338 /* Assets.xcassets in Resources */,
+				04EC939821B10CC400440FB0 /* MyFirstScetionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,18 +558,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EC939721B10CC400440FB0 /* MyFirstScetionCell.swift in Sources */,
 				04FD9EB421ABCC5100127FC0 /* NetworkTool.swift in Sources */,
 				04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */,
+				04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */,
 				04D5085A219A8489005DE338 /* VideoViewController.swift in Sources */,
 				04D50853219A8489005DE338 /* HuoShanViewController.swift in Sources */,
 				04D50859219A8489005DE338 /* MineViewController.swift in Sources */,
 				04D5085F219A84B6005DE338 /* MyNavigationController.swift in Sources */,
 				04D50867219AB363005DE338 /* MyTabBar.swift in Sources */,
 				04E2C7D221AFE66B008A8E71 /* MyCellModel.swift in Sources */,
+				04EC939321B0D99B00440FB0 /* MyOtherCell.swift in Sources */,
 				04D50858219A8489005DE338 /* HomeViewController.swift in Sources */,
 				04D50860219A84B6005DE338 /* MyTabBarController.swift in Sources */,
 				04FD9EAE21AB8CB300127FC0 /* Const.swift in Sources */,
 				04FD9EB121AB8E3C00127FC0 /* UIColor+Extension.swift in Sources */,
+				04EC939C21B1125900440FB0 /* UITableView+Extension.swift in Sources */,
+				04EC939E21B1141B00440FB0 /* UICollectionView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,12 @@ class MineViewController: UITableViewController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = UIColor.globalBackgroundColor()
+        tableView.separatorStyle = .none
+        tableView.register(UINib(nibName: String(describing: MyOtherCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyOtherCell.self))
+        tableView.register(UINib(nibName: String(describing: MyFirstScetionCell.self),bundle: nil), forCellReuseIdentifier: String(describing: MyFirstScetionCell.self))
+        tableView.lwn_registerCell(cell: MyFirstScetionCell.self)
+        tableView.lwn_registerCell(cell: MyOtherCell.self)
+        
 
         
         //获取我的cell数据
@@ -40,7 +46,11 @@ class MineViewController: UITableViewController {
 extension MineViewController{
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return section == 1 ? 0:10
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 45
     }
     
     
@@ -60,11 +70,28 @@ extension MineViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            let cell = tableView.lwn_dequeueReusableCell(indexPath: indexPath) as MyFirstScetionCell
+            let section = sections[indexPath.section]
+            let myCellModel = section[indexPath.row]
+            cell.leftLabel.text = myCellModel.text
+            cell.rightLabel.text = myCellModel.grey_text
+            return cell
+            
+        }
+        let cell = tableView.lwn_dequeueReusableCell(indexPath: indexPath) as MyOtherCell
         let section = sections[indexPath.section]
         let myCellModel = section[indexPath.row]
-        cell.textLabel?.text = myCellModel.text
+        cell.leftLabel.text = myCellModel.text
+        cell.rightLabel.text = myCellModel.grey_text
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
 }
 
