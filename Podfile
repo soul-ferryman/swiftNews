@@ -12,5 +12,9 @@ target 'News' do
  pod 'SwiftyJSON'
  
  pod 'HandyJSON' , '~>4.2.0'
+ 
+ pod 'Kingfisher'
+ 
+ pod 'SwiftTheme'
 
 end

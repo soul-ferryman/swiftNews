@@ -18,6 +18,13 @@
 		04D50860219A84B6005DE338 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085C219A84B6005DE338 /* MyTabBarController.swift */; };
 		04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085E219A84B6005DE338 /* AppDelegate.swift */; };
 		04D50867219AB363005DE338 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50866219AB363005DE338 /* MyTabBar.swift */; };
+		04DEA1D821B4CFB000B05143 /* MyConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA1D621B4CFB000B05143 /* MyConcernCell.swift */; };
+		04DEA1D921B4CFB000B05143 /* MyConcernCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1D721B4CFB000B05143 /* MyConcernCell.xib */; };
+		04DEA1DB21B50C3B00B05143 /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA1DA21B50C3B00B05143 /* MyHeaderView.swift */; };
+		04DEA1DD21B50C4F00B05143 /* MyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1DC21B50C4F00B05143 /* MyHeaderView.xib */; };
+		04DEA1E121B5272B00B05143 /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA1E021B5272B00B05143 /* MyTheme.swift */; };
+		04DEA1E421B5294800B05143 /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1E321B5294800B05143 /* default_theme.plist */; };
+		04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1E521B5295C00B05143 /* night_theme.plist */; };
 		04E2C7D221AFE66B008A8E71 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2C7D121AFE66B008A8E71 /* MyCellModel.swift */; };
 		04EC939321B0D99B00440FB0 /* MyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939121B0D99B00440FB0 /* MyOtherCell.swift */; };
 		04EC939421B0D99B00440FB0 /* MyOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EC939221B0D99B00440FB0 /* MyOtherCell.xib */; };
@@ -67,6 +74,13 @@
 		04D5085C219A84B6005DE338 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		04D5085E219A84B6005DE338 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D50866219AB363005DE338 /* MyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		04DEA1D621B4CFB000B05143 /* MyConcernCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyConcernCell.swift; sourceTree = "<group>"; };
+		04DEA1D721B4CFB000B05143 /* MyConcernCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyConcernCell.xib; sourceTree = "<group>"; };
+		04DEA1DA21B50C3B00B05143 /* MyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
+		04DEA1DC21B50C4F00B05143 /* MyHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeaderView.xib; sourceTree = "<group>"; };
+		04DEA1E021B5272B00B05143 /* MyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
+		04DEA1E321B5294800B05143 /* default_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
+		04DEA1E521B5295C00B05143 /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
 		04E2C7D121AFE66B008A8E71 /* MyCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
 		04EC939121B0D99B00440FB0 /* MyOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOtherCell.swift; sourceTree = "<group>"; };
 		04EC939221B0D99B00440FB0 /* MyOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOtherCell.xib; sourceTree = "<group>"; };
@@ -317,6 +331,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04DEA1E221B528F100B05143 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				04DEA1E321B5294800B05143 /* default_theme.plist */,
+				04DEA1E521B5295C00B05143 /* night_theme.plist */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		04E2C7D021AFE66B008A8E71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +355,10 @@
 				04EC939221B0D99B00440FB0 /* MyOtherCell.xib */,
 				04EC939521B10CC400440FB0 /* MyFirstScetionCell.swift */,
 				04EC939621B10CC400440FB0 /* MyFirstScetionCell.xib */,
+				04DEA1D621B4CFB000B05143 /* MyConcernCell.swift */,
+				04DEA1D721B4CFB000B05143 /* MyConcernCell.xib */,
+				04DEA1DA21B50C3B00B05143 /* MyHeaderView.swift */,
+				04DEA1DC21B50C4F00B05143 /* MyHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +366,7 @@
 		04FD9EAA21AB8C3700127FC0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				04DEA1E221B528F100B05143 /* Theme */,
 				04FD9EAD21AB8CB300127FC0 /* Const.swift */,
 			);
 			path = Other;
@@ -359,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				04FD9EB321ABCC5100127FC0 /* NetworkTool.swift */,
+				04DEA1E021B5272B00B05143 /* MyTheme.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -488,7 +517,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DEA1E421B5294800B05143 /* default_theme.plist in Resources */,
+				04DEA1D921B4CFB000B05143 /* MyConcernCell.xib in Resources */,
 				04EC939421B0D99B00440FB0 /* MyOtherCell.xib in Resources */,
+				04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */,
+				04DEA1DD21B50C4F00B05143 /* MyHeaderView.xib in Resources */,
 				04D50805219A614B005DE338 /* Assets.xcassets in Resources */,
 				04EC939821B10CC400440FB0 /* MyFirstScetionCell.xib in Resources */,
 			);
@@ -520,12 +553,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-News/Pods-News-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,7 +596,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EC939721B10CC400440FB0 /* MyFirstScetionCell.swift in Sources */,
+				04DEA1E121B5272B00B05143 /* MyTheme.swift in Sources */,
 				04FD9EB421ABCC5100127FC0 /* NetworkTool.swift in Sources */,
+				04DEA1D821B4CFB000B05143 /* MyConcernCell.swift in Sources */,
+				04DEA1DB21B50C3B00B05143 /* MyHeaderView.swift in Sources */,
 				04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */,
 				04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */,
 				04D5085A219A8489005DE338 /* VideoViewController.swift in Sources */,

@@ -12,10 +12,17 @@ import UIKit
 class MineViewController: UITableViewController {
     
     var sections = [[MyCellModel]]()
+    var concerns = [MyConcern]()
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
+        
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = UIColor.globalBackgroundColor()
         tableView.separatorStyle = .none
@@ -23,6 +30,7 @@ class MineViewController: UITableViewController {
         tableView.register(UINib(nibName: String(describing: MyFirstScetionCell.self),bundle: nil), forCellReuseIdentifier: String(describing: MyFirstScetionCell.self))
         tableView.lwn_registerCell(cell: MyFirstScetionCell.self)
         tableView.lwn_registerCell(cell: MyOtherCell.self)
+        tableView.tableHeaderView = MyHeaderView.headerView()
         
 
         
@@ -34,8 +42,13 @@ class MineViewController: UITableViewController {
             myConcerns.append(myConcern!)
             self.sections.append(myConcerns)
             self.sections += sections;
-            
             self.tableView.reloadData()
+            
+            NetworkTool.loadMyConcern(completionHandler: { (concerns) in
+                self.concerns = concerns
+                let indexSet = NSIndexSet(index: 0)
+                self.tableView.reloadSections(indexSet as IndexSet, with: .automatic)
+            })
         }
     }
     
@@ -50,7 +63,11 @@ extension MineViewController{
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45
+        if indexPath.section == 0 && indexPath.row == 0  {
+            return (concerns.count == 0 || concerns.count == 1) ? 40 : 114
+        }
+        
+        return 40
     }
     
     
@@ -74,9 +91,20 @@ extension MineViewController{
         if indexPath.section == 0 && indexPath.row == 0 {
             let cell = tableView.lwn_dequeueReusableCell(indexPath: indexPath) as MyFirstScetionCell
             let section = sections[indexPath.section]
-            let myCellModel = section[indexPath.row]
-            cell.leftLabel.text = myCellModel.text
-            cell.rightLabel.text = myCellModel.grey_text
+            cell.myCellModel = section[indexPath.row]
+
+            if concerns.count == 0 || concerns.count == 1 {
+                cell.collectionView.isHidden = true
+            }
+            if concerns.count == 1 {
+                cell.myConcern = concerns[0]
+            }
+            
+            if concerns.count > 1{
+                cell.myConcerns = concerns
+            }
+            
+            
             return cell
             
         }
