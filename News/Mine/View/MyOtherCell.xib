@@ -67,6 +67,7 @@
                 <outlet property="leftLabel" destination="Hqg-SW-Geb" id="6y6-0j-if7"/>
                 <outlet property="rightImageview" destination="Cwx-iI-3dD" id="isO-QP-tzt"/>
                 <outlet property="rightLabel" destination="z5l-4l-yGh" id="ecM-AF-o1P"/>
+                <outlet property="separatorView" destination="cgf-fN-3Ma" id="YJ1-un-cPt"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>
         </tableViewCell>

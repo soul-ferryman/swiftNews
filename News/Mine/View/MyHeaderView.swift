@@ -25,14 +25,31 @@ class MyHeaderView: UIView {
     @IBOutlet weak var historyImageView: UIImageView!
     @IBOutlet weak var dayOrNightImageView: UIImageView!
     
+    @IBOutlet weak var moreLofinView: UIView!
+    @IBOutlet weak var moreLoginLabel: UILabel!
+    @IBOutlet weak var dayOrNightLabel: UILabel!
+    @IBOutlet weak var favourateLabel: UILabel!
     
-    var dayOrNightSelect:Bool = false
+    @IBOutlet weak var historyLabel: UILabel!
+    var dayOrNightSelect:Bool = UserDefaults.standard.bool(forKey: isNight)
     
     
     //点击了日间夜间按钮
     @IBAction func dayOrNightButtonClicked(_ sender: UIButton) {
         dayOrNightSelect = !dayOrNightSelect
+        
+        UserDefaults.standard.set(dayOrNightSelect, forKey: "isNight")
+//        UserDefaults.standard.synchronize()
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: dayOrNight), object: dayOrNightSelect)
+        
+        if dayOrNightSelect == true {
+            dayOrNightLabel.text = "日间"
+        }else {
+            dayOrNightLabel.text = "夜间"
+        }
         MyTheme.switchNight(dayOrNightSelect)
+        
     }
     
     class func headerView()-> MyHeaderView {
@@ -41,10 +58,7 @@ class MyHeaderView: UIView {
     }
 
     override func awakeFromNib() {
-        
-        
-        
-        ThemeManager.setTheme(plistName: "default_theme", path: .mainBundle)
+        super.awakeFromNib()
         
         //设置主题
         
@@ -55,7 +69,21 @@ class MyHeaderView: UIView {
         favouriteImageView.theme_image = "images.mineFavoriteButton"
         historyImageView.theme_image = "images.mineHistoryButton"
         dayOrNightImageView.theme_image = "images.dayOrNightButton"
+        if dayOrNightSelect == true {
+            dayOrNightLabel.text = "日间"
+        }else {
+            dayOrNightLabel.text = "夜间"
+        }
         
+        moreLofinView.theme_backgroundColor = "colors.moreLoginBackgroundColor"
+        moreLoginLabel.theme_textColor = "colors.moreLoginTextColor"
+        favourateLabel.theme_textColor = "colors.black"
+        historyLabel.theme_textColor = "colors.black"
+        dayOrNightLabel.theme_textColor = "colors.black"
+        
+        favouriteButton.theme_backgroundColor = "colors.cellBackfroundColor"
+        historyButton.theme_backgroundColor = "colors.cellBackfroundColor"
+        daysOrNightButton.theme_backgroundColor = "colors.cellBackfroundColor"
     }
 
 }

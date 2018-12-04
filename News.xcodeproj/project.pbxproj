@@ -12,24 +12,26 @@
 		04D5081E219A614B005DE338 /* NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5081D219A614B005DE338 /* NewsUITests.swift */; };
 		04D50853219A8489005DE338 /* HuoShanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50839219A8489005DE338 /* HuoShanViewController.swift */; };
 		04D50858219A8489005DE338 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50846219A8489005DE338 /* HomeViewController.swift */; };
-		04D50859219A8489005DE338 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5084B219A8489005DE338 /* MineViewController.swift */; };
 		04D5085A219A8489005DE338 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50850219A8489005DE338 /* VideoViewController.swift */; };
 		04D5085F219A84B6005DE338 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085B219A84B6005DE338 /* MyNavigationController.swift */; };
 		04D50860219A84B6005DE338 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085C219A84B6005DE338 /* MyTabBarController.swift */; };
 		04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085E219A84B6005DE338 /* AppDelegate.swift */; };
 		04D50867219AB363005DE338 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50866219AB363005DE338 /* MyTabBar.swift */; };
-		04DEA1D821B4CFB000B05143 /* MyConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA1D621B4CFB000B05143 /* MyConcernCell.swift */; };
-		04DEA1D921B4CFB000B05143 /* MyConcernCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1D721B4CFB000B05143 /* MyConcernCell.xib */; };
-		04DEA1DB21B50C3B00B05143 /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA1DA21B50C3B00B05143 /* MyHeaderView.swift */; };
-		04DEA1DD21B50C4F00B05143 /* MyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1DC21B50C4F00B05143 /* MyHeaderView.xib */; };
+		04DE2CBB21B620C200D634A3 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CAF21B620C200D634A3 /* MineViewController.swift */; };
+		04DE2CBC21B620C300D634A3 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CB121B620C200D634A3 /* MyCellModel.swift */; };
+		04DE2CBD21B620C300D634A3 /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CB321B620C200D634A3 /* MyHeaderView.swift */; };
+		04DE2CBE21B620C300D634A3 /* MyFirstScetionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CB421B620C200D634A3 /* MyFirstScetionCell.swift */; };
+		04DE2CBF21B620C300D634A3 /* MyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE2CB521B620C200D634A3 /* MyHeaderView.xib */; };
+		04DE2CC021B620C300D634A3 /* MyOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE2CB621B620C200D634A3 /* MyOtherCell.xib */; };
+		04DE2CC121B620C300D634A3 /* MyConcernCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE2CB721B620C200D634A3 /* MyConcernCell.xib */; };
+		04DE2CC221B620C300D634A3 /* MyFirstScetionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE2CB821B620C200D634A3 /* MyFirstScetionCell.xib */; };
+		04DE2CC321B620C300D634A3 /* MyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CB921B620C200D634A3 /* MyOtherCell.swift */; };
+		04DE2CC421B620C300D634A3 /* MyConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CBA21B620C200D634A3 /* MyConcernCell.swift */; };
+		04DE2CC621B65EC400D634A3 /* MoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CC521B65EC400D634A3 /* MoreLoginViewController.swift */; };
+		04DE2CC821B6641E00D634A3 /* MoreLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DE2CC721B6641E00D634A3 /* MoreLoginViewController.storyboard */; };
 		04DEA1E121B5272B00B05143 /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA1E021B5272B00B05143 /* MyTheme.swift */; };
 		04DEA1E421B5294800B05143 /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1E321B5294800B05143 /* default_theme.plist */; };
 		04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1E521B5295C00B05143 /* night_theme.plist */; };
-		04E2C7D221AFE66B008A8E71 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2C7D121AFE66B008A8E71 /* MyCellModel.swift */; };
-		04EC939321B0D99B00440FB0 /* MyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939121B0D99B00440FB0 /* MyOtherCell.swift */; };
-		04EC939421B0D99B00440FB0 /* MyOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EC939221B0D99B00440FB0 /* MyOtherCell.xib */; };
-		04EC939721B10CC400440FB0 /* MyFirstScetionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939521B10CC400440FB0 /* MyFirstScetionCell.swift */; };
-		04EC939821B10CC400440FB0 /* MyFirstScetionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EC939621B10CC400440FB0 /* MyFirstScetionCell.xib */; };
 		04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939921B1119100440FB0 /* UIView+Extension.swift */; };
 		04EC939C21B1125900440FB0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939B21B1125900440FB0 /* UITableView+Extension.swift */; };
 		04EC939E21B1141B00440FB0 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939D21B1141B00440FB0 /* UICollectionView+Extension.swift */; };
@@ -68,24 +70,26 @@
 		04D5081F219A614B005DE338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D50839219A8489005DE338 /* HuoShanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuoShanViewController.swift; sourceTree = "<group>"; };
 		04D50846219A8489005DE338 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		04D5084B219A8489005DE338 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		04D50850219A8489005DE338 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		04D5085B219A84B6005DE338 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		04D5085C219A84B6005DE338 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		04D5085E219A84B6005DE338 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D50866219AB363005DE338 /* MyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
-		04DEA1D621B4CFB000B05143 /* MyConcernCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyConcernCell.swift; sourceTree = "<group>"; };
-		04DEA1D721B4CFB000B05143 /* MyConcernCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyConcernCell.xib; sourceTree = "<group>"; };
-		04DEA1DA21B50C3B00B05143 /* MyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
-		04DEA1DC21B50C4F00B05143 /* MyHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeaderView.xib; sourceTree = "<group>"; };
+		04DE2CAF21B620C200D634A3 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		04DE2CB121B620C200D634A3 /* MyCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
+		04DE2CB321B620C200D634A3 /* MyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
+		04DE2CB421B620C200D634A3 /* MyFirstScetionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFirstScetionCell.swift; sourceTree = "<group>"; };
+		04DE2CB521B620C200D634A3 /* MyHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHeaderView.xib; sourceTree = "<group>"; };
+		04DE2CB621B620C200D634A3 /* MyOtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyOtherCell.xib; sourceTree = "<group>"; };
+		04DE2CB721B620C200D634A3 /* MyConcernCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyConcernCell.xib; sourceTree = "<group>"; };
+		04DE2CB821B620C200D634A3 /* MyFirstScetionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFirstScetionCell.xib; sourceTree = "<group>"; };
+		04DE2CB921B620C200D634A3 /* MyOtherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOtherCell.swift; sourceTree = "<group>"; };
+		04DE2CBA21B620C200D634A3 /* MyConcernCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyConcernCell.swift; sourceTree = "<group>"; };
+		04DE2CC521B65EC400D634A3 /* MoreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLoginViewController.swift; sourceTree = "<group>"; };
+		04DE2CC721B6641E00D634A3 /* MoreLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MoreLoginViewController.storyboard; sourceTree = "<group>"; };
 		04DEA1E021B5272B00B05143 /* MyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
 		04DEA1E321B5294800B05143 /* default_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
 		04DEA1E521B5295C00B05143 /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
-		04E2C7D121AFE66B008A8E71 /* MyCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
-		04EC939121B0D99B00440FB0 /* MyOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOtherCell.swift; sourceTree = "<group>"; };
-		04EC939221B0D99B00440FB0 /* MyOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOtherCell.xib; sourceTree = "<group>"; };
-		04EC939521B10CC400440FB0 /* MyFirstScetionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstScetionCell.swift; sourceTree = "<group>"; };
-		04EC939621B10CC400440FB0 /* MyFirstScetionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFirstScetionCell.xib; sourceTree = "<group>"; };
 		04EC939921B1119100440FB0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		04EC939B21B1125900440FB0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		04EC939D21B1141B00440FB0 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
@@ -154,8 +158,8 @@
 				04D50844219A8489005DE338 /* Home */,
 				04D5084E219A8489005DE338 /* Video */,
 				04D50837219A8489005DE338 /* Huoshan */,
-				04D50849219A8489005DE338 /* Mine */,
 				04FD9EAF21AB8DD600127FC0 /* Extension */,
+				04DE2CAD21B620C200D634A3 /* Mine */,
 				04FD9EAA21AB8C3700127FC0 /* Other */,
 				04FD9EB221AB9AF200127FC0 /* Tools */,
 				04D50804219A614B005DE338 /* Assets.xcassets */,
@@ -281,24 +285,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		04D50849219A8489005DE338 /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				04EC939021B0D95A00440FB0 /* View */,
-				04E2C7D021AFE66B008A8E71 /* Model */,
-				04D5084A219A8489005DE338 /* Controller */,
-			);
-			path = Mine;
-			sourceTree = "<group>";
-		};
-		04D5084A219A8489005DE338 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				04D5084B219A8489005DE338 /* MineViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		04D5084E219A8489005DE338 /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +317,49 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		04DE2CAD21B620C200D634A3 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				04DE2CAE21B620C200D634A3 /* Controller */,
+				04DE2CB021B620C200D634A3 /* Model */,
+				04DE2CB221B620C200D634A3 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		04DE2CAE21B620C200D634A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04DE2CAF21B620C200D634A3 /* MineViewController.swift */,
+				04DE2CC521B65EC400D634A3 /* MoreLoginViewController.swift */,
+				04DE2CC721B6641E00D634A3 /* MoreLoginViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04DE2CB021B620C200D634A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04DE2CB121B620C200D634A3 /* MyCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04DE2CB221B620C200D634A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04DE2CB321B620C200D634A3 /* MyHeaderView.swift */,
+				04DE2CB521B620C200D634A3 /* MyHeaderView.xib */,
+				04DE2CB421B620C200D634A3 /* MyFirstScetionCell.swift */,
+				04DE2CB821B620C200D634A3 /* MyFirstScetionCell.xib */,
+				04DE2CB921B620C200D634A3 /* MyOtherCell.swift */,
+				04DE2CB621B620C200D634A3 /* MyOtherCell.xib */,
+				04DE2CBA21B620C200D634A3 /* MyConcernCell.swift */,
+				04DE2CB721B620C200D634A3 /* MyConcernCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04DEA1E221B528F100B05143 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,29 +367,6 @@
 				04DEA1E521B5295C00B05143 /* night_theme.plist */,
 			);
 			path = Theme;
-			sourceTree = "<group>";
-		};
-		04E2C7D021AFE66B008A8E71 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				04E2C7D121AFE66B008A8E71 /* MyCellModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		04EC939021B0D95A00440FB0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				04EC939121B0D99B00440FB0 /* MyOtherCell.swift */,
-				04EC939221B0D99B00440FB0 /* MyOtherCell.xib */,
-				04EC939521B10CC400440FB0 /* MyFirstScetionCell.swift */,
-				04EC939621B10CC400440FB0 /* MyFirstScetionCell.xib */,
-				04DEA1D621B4CFB000B05143 /* MyConcernCell.swift */,
-				04DEA1D721B4CFB000B05143 /* MyConcernCell.xib */,
-				04DEA1DA21B50C3B00B05143 /* MyHeaderView.swift */,
-				04DEA1DC21B50C4F00B05143 /* MyHeaderView.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		04FD9EAA21AB8C3700127FC0 /* Other */ = {
@@ -518,12 +524,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DEA1E421B5294800B05143 /* default_theme.plist in Resources */,
-				04DEA1D921B4CFB000B05143 /* MyConcernCell.xib in Resources */,
-				04EC939421B0D99B00440FB0 /* MyOtherCell.xib in Resources */,
 				04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */,
-				04DEA1DD21B50C4F00B05143 /* MyHeaderView.xib in Resources */,
+				04DE2CC021B620C300D634A3 /* MyOtherCell.xib in Resources */,
 				04D50805219A614B005DE338 /* Assets.xcassets in Resources */,
-				04EC939821B10CC400440FB0 /* MyFirstScetionCell.xib in Resources */,
+				04DE2CC821B6641E00D634A3 /* MoreLoginViewController.storyboard in Resources */,
+				04DE2CC121B620C300D634A3 /* MyConcernCell.xib in Resources */,
+				04DE2CBF21B620C300D634A3 /* MyHeaderView.xib in Resources */,
+				04DE2CC221B620C300D634A3 /* MyFirstScetionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +560,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-News/Pods-News-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -561,6 +569,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -595,26 +604,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04EC939721B10CC400440FB0 /* MyFirstScetionCell.swift in Sources */,
+				04DE2CC421B620C300D634A3 /* MyConcernCell.swift in Sources */,
+				04DE2CC621B65EC400D634A3 /* MoreLoginViewController.swift in Sources */,
+				04DE2CBE21B620C300D634A3 /* MyFirstScetionCell.swift in Sources */,
 				04DEA1E121B5272B00B05143 /* MyTheme.swift in Sources */,
 				04FD9EB421ABCC5100127FC0 /* NetworkTool.swift in Sources */,
-				04DEA1D821B4CFB000B05143 /* MyConcernCell.swift in Sources */,
-				04DEA1DB21B50C3B00B05143 /* MyHeaderView.swift in Sources */,
 				04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */,
+				04DE2CBC21B620C300D634A3 /* MyCellModel.swift in Sources */,
 				04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */,
 				04D5085A219A8489005DE338 /* VideoViewController.swift in Sources */,
 				04D50853219A8489005DE338 /* HuoShanViewController.swift in Sources */,
-				04D50859219A8489005DE338 /* MineViewController.swift in Sources */,
 				04D5085F219A84B6005DE338 /* MyNavigationController.swift in Sources */,
 				04D50867219AB363005DE338 /* MyTabBar.swift in Sources */,
-				04E2C7D221AFE66B008A8E71 /* MyCellModel.swift in Sources */,
-				04EC939321B0D99B00440FB0 /* MyOtherCell.swift in Sources */,
 				04D50858219A8489005DE338 /* HomeViewController.swift in Sources */,
 				04D50860219A84B6005DE338 /* MyTabBarController.swift in Sources */,
 				04FD9EAE21AB8CB300127FC0 /* Const.swift in Sources */,
+				04DE2CBD21B620C300D634A3 /* MyHeaderView.swift in Sources */,
 				04FD9EB121AB8E3C00127FC0 /* UIColor+Extension.swift in Sources */,
+				04DE2CC321B620C300D634A3 /* MyOtherCell.swift in Sources */,
 				04EC939C21B1125900440FB0 /* UITableView+Extension.swift in Sources */,
 				04EC939E21B1141B00440FB0 /* UICollectionView+Extension.swift in Sources */,
+				04DE2CBB21B620C200D634A3 /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,7 +785,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWXTX3L7Y3;
 				INFOPLIST_FILE = News/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -796,7 +806,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWXTX3L7Y3;
 				INFOPLIST_FILE = News/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

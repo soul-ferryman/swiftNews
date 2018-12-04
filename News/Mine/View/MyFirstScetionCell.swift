@@ -18,7 +18,9 @@ class MyFirstScetionCell: UITableViewCell ,RegisterCellOrNib {
     @IBOutlet weak var rightImageview: UIImageView!
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var separatorView: UIView!
     
+    @IBOutlet weak var topView: UIView!
     var myConcerns = [MyConcern]() {
         didSet{
             collectionView.reloadData()
@@ -55,6 +57,23 @@ class MyFirstScetionCell: UITableViewCell ,RegisterCellOrNib {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.lwn_registerCell(cell: MyConcernCell.self)
+        
+        
+        leftLabel.theme_textColor = "colors.black"
+        
+        rightLabel.theme_textColor = "colors.cellRightTextColor"
+        
+        rightImageview.theme_image = "images.cellRightArrow"
+        
+        separatorView.theme_backgroundColor = "colors.separatorViewColor"
+        
+        theme_backgroundColor = "colors.cellBackfroundColor"
+        
+        topView.theme_backgroundColor = "colors.cellBackfroundColor"
+        
+        collectionView.theme_backgroundColor = "colors.cellBackfroundColor"
+        
+        rightImageview.theme_image = "images.cellRightArrow"
     
     }
 

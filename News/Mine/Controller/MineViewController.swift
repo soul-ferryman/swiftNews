@@ -18,19 +18,22 @@ class MineViewController: UITableViewController {
         return true
     }
     
+    var headerView = MyHeaderView.headerView()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         
         tableView.tableFooterView = UIView()
-        tableView.backgroundColor = UIColor.globalBackgroundColor()
+        tableView.theme_backgroundColor = "colors.viewBackgroundColors"
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: String(describing: MyOtherCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyOtherCell.self))
         tableView.register(UINib(nibName: String(describing: MyFirstScetionCell.self),bundle: nil), forCellReuseIdentifier: String(describing: MyFirstScetionCell.self))
         tableView.lwn_registerCell(cell: MyFirstScetionCell.self)
         tableView.lwn_registerCell(cell: MyOtherCell.self)
-        tableView.tableHeaderView = MyHeaderView.headerView()
+        tableView.tableHeaderView = headerView
         
 
         
@@ -50,6 +53,8 @@ class MineViewController: UITableViewController {
                 self.tableView.reloadSections(indexSet as IndexSet, with: .automatic)
             })
         }
+        
+        
     }
     
 
@@ -73,7 +78,7 @@ extension MineViewController{
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 10)) 
-        view.backgroundColor = UIColor.globalBackgroundColor()
+        view.theme_backgroundColor = "colors.viewBackgroundColors"
         return view
     }
     

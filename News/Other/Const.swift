@@ -20,6 +20,12 @@ let device_id : String  = "6096495334"
 
 let IID:String = "5034850950"
 
+let isNight = "isNight"
+
+let dayOrNight = "dayOrNight"
+
+
+
 
 
 

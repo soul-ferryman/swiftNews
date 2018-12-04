@@ -4,6 +4,10 @@
 <dict>
 	<key>images</key>
 	<dict>
+		<key>publishButtonBackgroundSelectedImage</key>
+		<string>feed_publish_press_44x44_</string>
+		<key>publishButtonBackgroundImage</key>
+		<string>feed_publish_44x44_</string>
 		<key>cellRightArrow</key>
 		<string>setting_rightarrow_8x14_</string>
 		<key>dayOrNightButton</key>
@@ -22,6 +26,23 @@
 		<string>cellphoneicon_login_profile_66x66_</string>
 	</dict>
 	<key>colors</key>
-	<dict/>
+	<dict>
+		<key>viewBackgroundColors</key>
+		<string>#f5f5f5</string>
+		<key>tabbarTintColor</key>
+		<string>#f55a5d</string>
+		<key>separatorViewColor</key>
+		<string>#f0f0f0</string>
+		<key>cellRightTextColor</key>
+		<string>#aaaaaa</string>
+		<key>cellBackfroundColor</key>
+		<string>#ffffff</string>
+		<key>black</key>
+		<string>#000000</string>
+		<key>moreLoginTextColor</key>
+		<string>#ffffff</string>
+		<key>moreLoginBackgroundColor</key>
+		<string>#00000060</string>
+	</dict>
 </dict>
 </plist>

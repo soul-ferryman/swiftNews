@@ -50,6 +50,9 @@ class MyConcernCell: UICollectionViewCell ,RegisterCellOrNib{
         // Initialization code
         tipsButton.layer.borderColor = UIColor.white.cgColor
         tipsButton.layer.borderWidth = 1
+        
+        theme_backgroundColor = "colors.cellBackfroundColor"
+        nameLabel.theme_textColor = "colors.black"
     }
 
 }

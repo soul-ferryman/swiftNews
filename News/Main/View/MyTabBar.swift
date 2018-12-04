@@ -15,6 +15,9 @@ class MyTabBar: UITabBar {
         super.init(frame: frame)
         
         addSubview(publishButton)
+        
+        theme_tintColor = "colors.tabbarTintColor"
+        theme_barTintColor = "colors.cellBackfroundColor"
     }
     
     // private 绝对私有，除了在当前类中可以访问之外，其他任何类都不能访问或者这个类的扩展都不能访问
@@ -26,9 +29,8 @@ class MyTabBar: UITabBar {
         
         let publishButton = UIButton(type: .custom)
         
-        publishButton.setImage(UIImage(named: "feed_publish_44x44_"), for: .normal)
-        
-        publishButton.setImage(UIImage(named: "feed_publish_press_44x44_"), for: .selected)
+        publishButton.theme_setBackgroundImage("images.publishButtonBackgroundImage", forState: .normal)
+        publishButton.theme_setBackgroundImage("images.publishButtonBackgroundSelectedImage", forState: .selected)
         
         publishButton.sizeToFit()
         

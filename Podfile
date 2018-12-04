@@ -16,5 +16,7 @@ target 'News' do
  pod 'Kingfisher'
  
  pod 'SwiftTheme'
+ 
+ pod 'IBAnimatable'
 
 end

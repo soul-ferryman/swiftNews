@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftTheme
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //这是GitHub客户端测试上传
         
         //这是scourceTree测试上传
+        
+        //设置主题颜色
+        print("\(UserDefaults.standard.bool(forKey: isNight))")
+        ThemeManager.setTheme(plistName: UserDefaults.standard.bool(forKey: isNight) ? "night_theme" : "default_theme", path: .mainBundle)
+        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
