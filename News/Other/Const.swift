@@ -24,6 +24,8 @@ let isNight = "isNight"
 
 let dayOrNight = "dayOrNight"
 
+let isIPhoneX :Bool = ScreenHeight >= 812 ? true : false 
+
 
 
 

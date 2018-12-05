@@ -18,5 +18,9 @@ target 'News' do
  pod 'SwiftTheme'
  
  pod 'IBAnimatable'
+ 
+ pod 'RxSwift'
+ 
+ pod 'RxCocoa'
 
 end

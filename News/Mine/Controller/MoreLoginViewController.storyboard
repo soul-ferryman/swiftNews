@@ -28,15 +28,18 @@
                                     <constraint firstAttribute="height" constant="24" id="b5Z-zm-BLy"/>
                                 </constraints>
                                 <state key="normal" image="close_sdk_login_14x14_"/>
+                                <connections>
+                                    <action selector="moreLoginCloseButtonClicked:" destination="u4D-gm-QG6" eventType="touchUpInside" id="dp1-Wc-6Zl"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="登录你的头条，精彩永不消失" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkQ-UQ-Gur">
-                                <rect key="frame" x="16" y="68" width="343" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="登录你的头条，精彩永不消失" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkQ-UQ-Gur">
+                                <rect key="frame" x="16" y="68" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-qd-R1j" customClass="AnimatableView" customModule="IBAnimatable">
-                                <rect key="frame" x="46" y="123" width="283" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-qd-R1j" customClass="AnimatableView" customModule="IBAnimatable">
+                                <rect key="frame" x="46" y="123.5" width="283" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ha-c8-o2x">
                                         <rect key="frame" x="188" y="0.0" width="95" height="44"/>
@@ -99,8 +102,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-MW-KTX" customClass="AnimatableView" customModule="IBAnimatable">
-                                <rect key="frame" x="46" y="177" width="283" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-MW-KTX" customClass="AnimatableView" customModule="IBAnimatable">
+                                <rect key="frame" x="46" y="177.5" width="283" height="44"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28h-Ei-anb">
                                         <rect key="frame" x="188" y="0.0" width="95" height="44"/>
@@ -163,8 +166,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="未注册手机验证后自动登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qth-Kt-qiI">
-                                <rect key="frame" x="16" y="231" width="343" height="13.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未注册手机验证后自动登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qth-Kt-qiI">
+                                <rect key="frame" x="16" y="231.5" width="343" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -196,6 +199,9 @@
                                 <state key="normal" title="账号密码登录">
                                     <color key="titleColor" red="0.28235294117647058" green="0.41960784313725491" blue="0.61568627450980395" alpha="0.74834118150684936" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginModeButtonClicked:" destination="u4D-gm-QG6" eventType="touchUpInside" id="XYg-bN-qXc"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="XgG-vh-6xE">
                                 <rect key="frame" x="46" y="587" width="283" height="40"/>
@@ -260,6 +266,28 @@
                             <constraint firstItem="ROD-JY-he7" firstAttribute="centerX" secondItem="bdX-n6-qQg" secondAttribute="centerX" id="zgx-Oq-0kM"/>
                         </constraints>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="_modalPosition" value="BottomCenter"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="enterTouTiaoButton" destination="Oo5-dT-dGk" id="EDp-3Z-sgK"/>
+                        <outlet property="findPasswordButton" destination="wiE-h8-qpv" id="zs9-Dp-PE0"/>
+                        <outlet property="findPasswordView" destination="6XT-7P-uBa" id="mAz-q1-sh3"/>
+                        <outlet property="loginModeButton" destination="ROD-JY-he7" id="N17-W9-vJG"/>
+                        <outlet property="middleTipLabel" destination="qth-Kt-qiI" id="3hK-7W-1oc"/>
+                        <outlet property="mobileTextField" destination="rXY-B4-wdq" id="dnB-SI-kWW"/>
+                        <outlet property="mobileView" destination="tPb-qd-R1j" id="x5s-5n-MJY"/>
+                        <outlet property="passwordtextField" destination="4P8-m8-Sr0" id="zWv-QB-Fj5"/>
+                        <outlet property="passwrodView" destination="1gI-MW-KTX" id="RQ1-dj-J0I"/>
+                        <outlet property="readButton" destination="zvG-Yx-kUa" id="73Q-Fd-c5H"/>
+                        <outlet property="readLabel" destination="nb4-dF-6Vc" id="4Cw-IA-u5o"/>
+                        <outlet property="sendVerifyButton" destination="V7b-Ye-iZ3" id="Qzk-rD-nD4"/>
+                        <outlet property="sendVerifyView" destination="fIz-w0-gph" id="sie-di-mEf"/>
+                        <outlet property="topLabel" destination="XkQ-UQ-Gur" id="jMD-Qt-4Vu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXf-Xs-UbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
