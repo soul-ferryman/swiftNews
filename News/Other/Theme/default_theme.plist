@@ -4,6 +4,20 @@
 <dict>
 	<key>images</key>
 	<dict>
+		<key>moreLoginMailButton</key>
+		<string>mailbox_sdk_login_40x40_</string>
+		<key>moreLoginTianyiButton</key>
+		<string>tianyi_sdk_login_40x40_</string>
+		<key>moreLoginQQButton</key>
+		<string>qq_sdk_login_40x40_</string>
+		<key>moreLoginWechatButton</key>
+		<string>weixin_sdk_login_40x40_</string>
+		<key>loginClosedButtonImage</key>
+		<string>close_sdk_login_14x14_</string>
+		<key>loginReadButtonSelected</key>
+		<string>details_choose_ok_icon_15x15_</string>
+		<key>loginReadButton</key>
+		<string>details_choose_icon_15x15_</string>
 		<key>publishButtonBackgroundSelectedImage</key>
 		<string>feed_publish_press_44x44_</string>
 		<key>publishButtonBackgroundImage</key>
@@ -27,6 +41,12 @@
 	</dict>
 	<key>colors</key>
 	<dict>
+		<key>loginMobileViewBackgroundColor</key>
+		<string>#ffffff</string>
+		<key>enterTouTiaoTextColors</key>
+		<string>#ffffff</string>
+		<key>enterTouTiaoBackgroundColors</key>
+		<string>#f9a9a9</string>
 		<key>viewBackgroundColors</key>
 		<string>#f5f5f5</string>
 		<key>tabbarTintColor</key>

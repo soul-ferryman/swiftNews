@@ -11,6 +11,7 @@ import IBAnimatable
 
 class MoreLoginViewController: AnimatableModalViewController {
 
+    @IBOutlet weak var loginClosedButton: UIButton!
     //顶部标题
     @IBOutlet weak var topLabel: UILabel!
     //手机号 view
@@ -40,7 +41,14 @@ class MoreLoginViewController: AnimatableModalViewController {
     //账号密码登录
     @IBOutlet weak var loginModeButton: UIButton!
     
+    @IBOutlet weak var wechatLoginButton: UIButton!
     
+    @IBOutlet weak var qqLoginButton: UIButton!
+    @IBOutlet weak var tianyiLoginButton: UIButton!
+    @IBOutlet weak var mailLoginButton: UIButton!
+    @IBAction func readButtonClicked(_ sender: UIButton) {
+        readButton.isSelected = !readButton.isSelected
+    }
     @IBAction func loginModeButtonClicked(_ sender: UIButton) {
         loginModeButton.isSelected = !loginModeButton.isSelected
         sendVerifyView.isHidden = sender.isSelected
@@ -58,6 +66,21 @@ class MoreLoginViewController: AnimatableModalViewController {
         // Do any additional setup after loading the view.
         
         loginModeButton .setTitle("免密码登录", for: .selected)
+        view.theme_backgroundColor = "colors.cellBackfroundColor"
+        topLabel.theme_textColor = "colors.black"
+        middleTipLabel.theme_textColor = "colors.cellRightTextColor"
+        readLabel.theme_textColor = "colors.black"
+        enterTouTiaoButton.theme_backgroundColor = "colors.enterTouTiaoBackgroundColors"
+        enterTouTiaoButton.theme_setTitleColor("colors.enterTouTiaoTextColors", forState: .normal)
+        readButton.theme_setImage("images.loginReadButton", forState: .selected)
+        readButton.theme_setImage("images.loginReadButtonSelected", forState: .normal)
+        mobileView.theme_backgroundColor = "colors.loginMobileViewBackgroundColor"
+        passwrodView.theme_backgroundColor = "colors.loginMobileViewBackgroundColor"
+        loginClosedButton.theme_setImage("images.loginClosedButtonImage", forState: .normal)
+        wechatLoginButton.theme_setImage("images.moreLoginWechatButton", forState: .normal)
+        qqLoginButton.theme_setImage("images.moreLoginQQButton", forState: .normal)
+        tianyiLoginButton.theme_setImage("images.moreLoginTianyiButton", forState: .normal)
+        mailLoginButton.theme_setImage("images.moreLoginMailButton", forState: .normal)
     }
     
 

@@ -4,6 +4,12 @@
 <dict>
 	<key>colors</key>
 	<dict>
+		<key>loginMobileViewBackgroundColor</key>
+		<string>#cacaca</string>
+		<key>enterTouTiaoTextColors</key>
+		<string>#929292</string>
+		<key>enterTouTiaoBackgroundColors</key>
+		<string>#5c3d3d</string>
 		<key>tabbarTintColor</key>
 		<string>#925657</string>
 		<key>viewBackgroundColors</key>
@@ -23,6 +29,20 @@
 	</dict>
 	<key>images</key>
 	<dict>
+		<key>moreLoginMailButton</key>
+		<string>mailbox_sdk_login_night_40x40_</string>
+		<key>moreLoginTianyiButton</key>
+		<string>tianyi_sdk_login_night_40x40_</string>
+		<key>moreLoginQQButton</key>
+		<string>qq_sdk_login_night_40x40_</string>
+		<key>moreLoginWechatButton</key>
+		<string>weixin_sdk_login_night_40x40_</string>
+		<key>loginClosedButtonImage</key>
+		<string>close_sdk_login_night_14x14_</string>
+		<key>loginReadButtonSelected</key>
+		<string>details_choose_ok_icon_night_15x15_</string>
+		<key>loginReadButton</key>
+		<string>details_choose_icon_night_15x15_</string>
 		<key>publishButtonBackgroundSelectedImage</key>
 		<string>feed_publish_press_night_44x44_</string>
 		<key>publishButtonBackgroundImage</key>
