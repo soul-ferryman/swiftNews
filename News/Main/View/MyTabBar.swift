@@ -15,7 +15,6 @@ class MyTabBar: UITabBar {
         super.init(frame: frame)
         
         addSubview(publishButton)
-        print("hello world")
         
         theme_tintColor = "colors.tabbarTintColor"
         theme_barTintColor = "colors.cellBackfroundColor"
