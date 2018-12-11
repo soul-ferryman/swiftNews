@@ -94,7 +94,7 @@ class MyTabBarController: UITabBarController {
         
         setChildViewController(HuoShanViewController(), title: "火山", imageName: "huoshan", itemTag: 2)
         
-        setChildViewController(MineViewController(), title: "未登录", imageName: "no_login",  itemTag: 3)
+        setChildViewController(MineViewController.init(style: .grouped) , title: "未登录", imageName: "no_login",  itemTag: 3)
         
         //tabBar是readonly属性，不能直接修改，利用KVC吧readonly属性的权限改过来
         setValue(MyTabBar(), forKey: "tabBar")

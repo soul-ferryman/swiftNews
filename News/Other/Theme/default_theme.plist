@@ -41,6 +41,8 @@
 	</dict>
 	<key>colors</key>
 	<dict>
+		<key>navgationBarTintColor</key>
+		<string>#000000</string>
 		<key>loginMobileViewBackgroundColor</key>
 		<string>#ffffff</string>
 		<key>enterTouTiaoTextColors</key>

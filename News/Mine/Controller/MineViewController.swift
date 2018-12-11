@@ -23,7 +23,15 @@ class MineViewController: UITableViewController {
     
     var headerView = MyHeaderView.headerView()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = true
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.navigationBar.isHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,6 +143,17 @@ extension MineViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let model = sections[indexPath.section][indexPath.row]
+        
+        
+        if model.text == "系统设置" {
+            let settingVC = SettingViewController.init(style: .grouped)
+            settingVC.title = "设置"
+            self.navigationController?.pushViewController(settingVC, animated: true);
+        }
+        
+        
     }
     
     

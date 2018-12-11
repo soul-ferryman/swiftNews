@@ -32,6 +32,11 @@
 		04DEA1E121B5272B00B05143 /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA1E021B5272B00B05143 /* MyTheme.swift */; };
 		04DEA1E421B5294800B05143 /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1E321B5294800B05143 /* default_theme.plist */; };
 		04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA1E521B5295C00B05143 /* night_theme.plist */; };
+		04DEA29321BDF92700E58D78 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA29221BDF92700E58D78 /* SettingViewController.swift */; };
+		04DEA29521BDFEB000E58D78 /* settingPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA29421BDFEB000E58D78 /* settingPlist.plist */; };
+		04DEA29721BE012B00E58D78 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA29621BE012B00E58D78 /* SettingModel.swift */; };
+		04DEA29A21BE083200E58D78 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEA29821BE083200E58D78 /* SettingCell.swift */; };
+		04DEA29B21BE083200E58D78 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DEA29921BE083200E58D78 /* SettingCell.xib */; };
 		04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939921B1119100440FB0 /* UIView+Extension.swift */; };
 		04EC939C21B1125900440FB0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939B21B1125900440FB0 /* UITableView+Extension.swift */; };
 		04EC939E21B1141B00440FB0 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939D21B1141B00440FB0 /* UICollectionView+Extension.swift */; };
@@ -90,6 +95,11 @@
 		04DEA1E021B5272B00B05143 /* MyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
 		04DEA1E321B5294800B05143 /* default_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
 		04DEA1E521B5295C00B05143 /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
+		04DEA29221BDF92700E58D78 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		04DEA29421BDFEB000E58D78 /* settingPlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settingPlist.plist; sourceTree = "<group>"; };
+		04DEA29621BE012B00E58D78 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		04DEA29821BE083200E58D78 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		04DEA29921BE083200E58D78 /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		04EC939921B1119100440FB0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		04EC939B21B1125900440FB0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		04EC939D21B1141B00440FB0 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
@@ -331,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				04DE2CAF21B620C200D634A3 /* MineViewController.swift */,
+				04DEA29221BDF92700E58D78 /* SettingViewController.swift */,
 				04DE2CC521B65EC400D634A3 /* MoreLoginViewController.swift */,
 				04DE2CC721B6641E00D634A3 /* MoreLoginViewController.storyboard */,
 			);
@@ -341,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				04DE2CB121B620C200D634A3 /* MyCellModel.swift */,
+				04DEA29621BE012B00E58D78 /* SettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,6 +368,8 @@
 				04DE2CB621B620C200D634A3 /* MyOtherCell.xib */,
 				04DE2CBA21B620C200D634A3 /* MyConcernCell.swift */,
 				04DE2CB721B620C200D634A3 /* MyConcernCell.xib */,
+				04DEA29821BE083200E58D78 /* SettingCell.swift */,
+				04DEA29921BE083200E58D78 /* SettingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,6 +388,7 @@
 			children = (
 				04DEA1E221B528F100B05143 /* Theme */,
 				04FD9EAD21AB8CB300127FC0 /* Const.swift */,
+				04DEA29421BDFEB000E58D78 /* settingPlist.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -527,7 +542,9 @@
 				04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */,
 				04DE2CC021B620C300D634A3 /* MyOtherCell.xib in Resources */,
 				04D50805219A614B005DE338 /* Assets.xcassets in Resources */,
+				04DEA29521BDFEB000E58D78 /* settingPlist.plist in Resources */,
 				04DE2CC821B6641E00D634A3 /* MoreLoginViewController.storyboard in Resources */,
+				04DEA29B21BE083200E58D78 /* SettingCell.xib in Resources */,
 				04DE2CC121B620C300D634A3 /* MyConcernCell.xib in Resources */,
 				04DE2CBF21B620C300D634A3 /* MyHeaderView.xib in Resources */,
 				04DE2CC221B620C300D634A3 /* MyFirstScetionCell.xib in Resources */,
@@ -611,6 +628,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DE2CC421B620C300D634A3 /* MyConcernCell.swift in Sources */,
+				04DEA29321BDF92700E58D78 /* SettingViewController.swift in Sources */,
+				04DEA29A21BE083200E58D78 /* SettingCell.swift in Sources */,
 				04DE2CC621B65EC400D634A3 /* MoreLoginViewController.swift in Sources */,
 				04DE2CBE21B620C300D634A3 /* MyFirstScetionCell.swift in Sources */,
 				04DEA1E121B5272B00B05143 /* MyTheme.swift in Sources */,
@@ -631,6 +650,7 @@
 				04EC939C21B1125900440FB0 /* UITableView+Extension.swift in Sources */,
 				04EC939E21B1141B00440FB0 /* UICollectionView+Extension.swift in Sources */,
 				04DE2CBB21B620C200D634A3 /* MineViewController.swift in Sources */,
+				04DEA29721BE012B00E58D78 /* SettingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
