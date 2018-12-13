@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D3443B21C23B54007B08B7 /* OffLineDownLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3443A21C23B54007B08B7 /* OffLineDownLoadViewController.swift */; };
+		04D3443E21C23C00007B08B7 /* OffLineDownLoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3443C21C23C00007B08B7 /* OffLineDownLoadCell.swift */; };
+		04D3443F21C23C00007B08B7 /* OffLineDownLoadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D3443D21C23C00007B08B7 /* OffLineDownLoadCell.xib */; };
+		04D3444221C23E3A007B08B7 /* HomeNewsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3444121C23E3A007B08B7 /* HomeNewsTitle.swift */; };
 		04D50805219A614B005DE338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D50804219A614B005DE338 /* Assets.xcassets */; };
 		04D50813219A614B005DE338 /* NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50812219A614B005DE338 /* NewsTests.swift */; };
 		04D5081E219A614B005DE338 /* NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5081D219A614B005DE338 /* NewsUITests.swift */; };
@@ -64,6 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04D3443A21C23B54007B08B7 /* OffLineDownLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffLineDownLoadViewController.swift; sourceTree = "<group>"; };
+		04D3443C21C23C00007B08B7 /* OffLineDownLoadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffLineDownLoadCell.swift; sourceTree = "<group>"; };
+		04D3443D21C23C00007B08B7 /* OffLineDownLoadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffLineDownLoadCell.xib; sourceTree = "<group>"; };
+		04D3444121C23E3A007B08B7 /* HomeNewsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewsTitle.swift; sourceTree = "<group>"; };
 		04D507FA219A614A005DE338 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D50804219A614B005DE338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04D50809219A614B005DE338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,6 +147,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04D3444021C23E28007B08B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04D3444121C23E3A007B08B7 /* HomeNewsTitle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		04D507F1219A614A005DE338 = {
 			isa = PBXGroup;
 			children = (
@@ -266,9 +282,8 @@
 		04D50844219A8489005DE338 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				04D3444021C23E28007B08B7 /* Model */,
 				04D50845219A8489005DE338 /* Controller */,
-				04D50847219A8489005DE338 /* Model */,
-				04D50848219A8489005DE338 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -279,20 +294,6 @@
 				04D50846219A8489005DE338 /* HomeViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		04D50847219A8489005DE338 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		04D50848219A8489005DE338 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		04D5084E219A8489005DE338 /* Video */ = {
@@ -342,6 +343,7 @@
 			children = (
 				04DE2CAF21B620C200D634A3 /* MineViewController.swift */,
 				04DEA29221BDF92700E58D78 /* SettingViewController.swift */,
+				04D3443A21C23B54007B08B7 /* OffLineDownLoadViewController.swift */,
 				04DE2CC521B65EC400D634A3 /* MoreLoginViewController.swift */,
 				04DE2CC721B6641E00D634A3 /* MoreLoginViewController.storyboard */,
 			);
@@ -370,6 +372,8 @@
 				04DE2CB721B620C200D634A3 /* MyConcernCell.xib */,
 				04DEA29821BE083200E58D78 /* SettingCell.swift */,
 				04DEA29921BE083200E58D78 /* SettingCell.xib */,
+				04D3443C21C23C00007B08B7 /* OffLineDownLoadCell.swift */,
+				04D3443D21C23C00007B08B7 /* OffLineDownLoadCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,6 +545,7 @@
 				04DEA1E421B5294800B05143 /* default_theme.plist in Resources */,
 				04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */,
 				04DE2CC021B620C300D634A3 /* MyOtherCell.xib in Resources */,
+				04D3443F21C23C00007B08B7 /* OffLineDownLoadCell.xib in Resources */,
 				04D50805219A614B005DE338 /* Assets.xcassets in Resources */,
 				04DEA29521BDFEB000E58D78 /* settingPlist.plist in Resources */,
 				04DE2CC821B6641E00D634A3 /* MoreLoginViewController.storyboard in Resources */,
@@ -628,6 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DE2CC421B620C300D634A3 /* MyConcernCell.swift in Sources */,
+				04D3443B21C23B54007B08B7 /* OffLineDownLoadViewController.swift in Sources */,
 				04DEA29321BDF92700E58D78 /* SettingViewController.swift in Sources */,
 				04DEA29A21BE083200E58D78 /* SettingCell.swift in Sources */,
 				04DE2CC621B65EC400D634A3 /* MoreLoginViewController.swift in Sources */,
@@ -635,12 +641,14 @@
 				04DEA1E121B5272B00B05143 /* MyTheme.swift in Sources */,
 				04FD9EB421ABCC5100127FC0 /* NetworkTool.swift in Sources */,
 				04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */,
+				04D3444221C23E3A007B08B7 /* HomeNewsTitle.swift in Sources */,
 				04DE2CBC21B620C300D634A3 /* MyCellModel.swift in Sources */,
 				04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */,
 				04D5085A219A8489005DE338 /* VideoViewController.swift in Sources */,
 				04D50853219A8489005DE338 /* HuoShanViewController.swift in Sources */,
 				04D5085F219A84B6005DE338 /* MyNavigationController.swift in Sources */,
 				04D50867219AB363005DE338 /* MyTabBar.swift in Sources */,
+				04D3443E21C23C00007B08B7 /* OffLineDownLoadCell.swift in Sources */,
 				04D50858219A8489005DE338 /* HomeViewController.swift in Sources */,
 				04D50860219A84B6005DE338 /* MyTabBarController.swift in Sources */,
 				04FD9EAE21AB8CB300127FC0 /* Const.swift in Sources */,

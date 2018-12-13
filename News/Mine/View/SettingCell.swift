@@ -12,7 +12,16 @@ class SettingCell: UITableViewCell,RegisterCellOrNib {
     
     var settingModel:SettingModel? {
         didSet {
-            self.setNeedsLayout()
+            titleLabel.text = settingModel!.title
+            subTitleLabel.text = settingModel!.subTitle
+            rightTitleLabel.text = settingModel!.rightTitle
+            arrowImageView.isHidden = settingModel!.isHiddenRightArraw
+            switchView.isHidden = settingModel!.isHiddenSwitch
+            
+            if settingModel!.isHiddenSubTitleTitle {
+                subTitleHeight.constant = 20
+                layoutIfNeeded()
+            }
         }
     }
     
@@ -44,16 +53,7 @@ class SettingCell: UITableViewCell,RegisterCellOrNib {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        titleLabel.text = settingModel!.title
-        subTitleLabel.text = settingModel!.subTitle
-        rightTitleLabel.text = settingModel!.rightTitle
-        arrowImageView.isHidden = settingModel!.isHiddenRightArraw
-        switchView.isHidden = settingModel!.isHiddenSwitch
-
-        if settingModel!.isHiddenSubTitleTitle {
-        subTitleHeight.constant = 20
-        layoutIfNeeded()
-        }
+        
         
         
         

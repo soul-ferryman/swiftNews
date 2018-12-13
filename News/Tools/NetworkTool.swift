@@ -11,14 +11,73 @@ import Alamofire
 import SwiftyJSON
 
 protocol NetworkToolProtocol {
+    
+    //--------------------------------home 首页---------------------------------
+//    //首页顶部新闻标题数据数据
+    static func loadHomeNewsTitleData(completionHandler:@escaping (_ newsTitles:[HomeNewsTitle])->())
+    
     //--------------------------------mine 我的---------------------------------
     //我的界面cell数据
     static func loadMyCellData(completionHandler:@escaping (_ sections:[[MyCellModel]])->())
     //我的关注数据
     static func loadMyConcern(completionHandler:@escaping (_ concerns:[MyConcern])->())
+    
 }
 
 extension NetworkToolProtocol {
+    //--------------------------------home 首页---------------------------------
+    //    //首页顶部新闻标题数据数据
+    static func loadHomeNewsTitleData(completionHandler:@escaping (_ newsTitles:[HomeNewsTitle])->()) {
+        
+        let url = BASE_URL + "/article/category/get_subscribed/v1/?"
+        let params = [
+                        "device_id":device_id,
+                        "iid":IID
+                      ]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else{
+                //网络错误
+                return
+            }
+            
+            if let value = response.result.value {
+                
+                let jsonValue = JSON(value)
+                if let data = jsonValue["data"].dictionary {
+                    if let datas = data["data"]?.arrayObject {
+                        var newsTitles = [HomeNewsTitle]()
+                        let jsonString = "{\"category\":\"\",\"name\":\"推荐\"}"
+                        let recommend = HomeNewsTitle.deserialize(from: jsonString)
+                        newsTitles.append(recommend!)
+                        
+                        
+                        for item in datas {
+                           
+                            let homeNewsTitle = HomeNewsTitle.deserialize(from: item as? NSDictionary)
+                            newsTitles.append(homeNewsTitle!)
+                        }
+                        
+                        completionHandler(newsTitles)
+                    }
+                    
+                }
+                
+            }
+            
+            
+            
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     //--------------------------------mine 我的---------------------------------
     //我的界面cell数据
     static func loadMyCellData(completionHandler:@escaping (_ sections:[[MyCellModel]])->()){
