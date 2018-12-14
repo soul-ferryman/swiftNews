@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046EB0CA21C39F0900E1EE52 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB0C921C39F0900E1EE52 /* SQLiteManager.swift */; };
 		04D3443B21C23B54007B08B7 /* OffLineDownLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3443A21C23B54007B08B7 /* OffLineDownLoadViewController.swift */; };
 		04D3443E21C23C00007B08B7 /* OffLineDownLoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3443C21C23C00007B08B7 /* OffLineDownLoadCell.swift */; };
 		04D3443F21C23C00007B08B7 /* OffLineDownLoadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D3443D21C23C00007B08B7 /* OffLineDownLoadCell.xib */; };
@@ -21,6 +22,7 @@
 		04D50860219A84B6005DE338 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085C219A84B6005DE338 /* MyTabBarController.swift */; };
 		04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085E219A84B6005DE338 /* AppDelegate.swift */; };
 		04D50867219AB363005DE338 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50866219AB363005DE338 /* MyTabBar.swift */; };
+		04D7F5A721C344D1000CC40E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D7F5A621C344D1000CC40E /* libsqlite3.0.tbd */; };
 		04DE2CBB21B620C200D634A3 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CAF21B620C200D634A3 /* MineViewController.swift */; };
 		04DE2CBC21B620C300D634A3 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CB121B620C200D634A3 /* MyCellModel.swift */; };
 		04DE2CBD21B620C300D634A3 /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CB321B620C200D634A3 /* MyHeaderView.swift */; };
@@ -68,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046EB0C921C39F0900E1EE52 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		04D3443A21C23B54007B08B7 /* OffLineDownLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffLineDownLoadViewController.swift; sourceTree = "<group>"; };
 		04D3443C21C23C00007B08B7 /* OffLineDownLoadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffLineDownLoadCell.swift; sourceTree = "<group>"; };
 		04D3443D21C23C00007B08B7 /* OffLineDownLoadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffLineDownLoadCell.xib; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		04D5085C219A84B6005DE338 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		04D5085E219A84B6005DE338 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D50866219AB363005DE338 /* MyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		04D7F5A621C344D1000CC40E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		04DE2CAF21B620C200D634A3 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		04DE2CB121B620C200D634A3 /* MyCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
 		04DE2CB321B620C200D634A3 /* MyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D7F5A721C344D1000CC40E /* libsqlite3.0.tbd in Frameworks */,
 				516C86B1615D52B73AAA9212 /* Pods_News.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +418,7 @@
 			children = (
 				04FD9EB321ABCC5100127FC0 /* NetworkTool.swift */,
 				04DEA1E021B5272B00B05143 /* MyTheme.swift */,
+				046EB0C921C39F0900E1EE52 /* SQLiteManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 		4CCBEFFE243C75E3D003107E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04D7F5A621C344D1000CC40E /* libsqlite3.0.tbd */,
 				7E84DB50B33D94EAAE70F5A6 /* Pods_News.framework */,
 				A610ADD162F617136295B0A8 /* Pods_NewsTests.framework */,
 				FB33D9AAEAC6AE14CD5E7930 /* Pods_NewsUITests.framework */,
@@ -587,6 +594,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -599,6 +607,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -643,6 +652,7 @@
 				04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */,
 				04D3444221C23E3A007B08B7 /* HomeNewsTitle.swift in Sources */,
 				04DE2CBC21B620C300D634A3 /* MyCellModel.swift in Sources */,
+				046EB0CA21C39F0900E1EE52 /* SQLiteManager.swift in Sources */,
 				04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */,
 				04D5085A219A8489005DE338 /* VideoViewController.swift in Sources */,
 				04D50853219A8489005DE338 /* HuoShanViewController.swift in Sources */,

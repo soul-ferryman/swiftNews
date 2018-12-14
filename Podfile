@@ -22,5 +22,7 @@ target 'News' do
  pod 'RxSwift'
  
  pod 'RxCocoa'
+ 
+ pod 'SQLite.swift'
 
 end

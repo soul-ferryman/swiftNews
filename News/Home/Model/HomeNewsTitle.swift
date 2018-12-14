@@ -23,6 +23,8 @@ struct HomeNewsTitle:HandyJSON {
     var concern_id:String = ""
     var type:Int = 0
     var icon_url:String = ""
+    var selected:Bool = true
+    
     
     
 }
