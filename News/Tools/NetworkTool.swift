@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import SVProgressHUD
 
 protocol NetworkToolProtocol {
     
@@ -22,11 +23,23 @@ protocol NetworkToolProtocol {
     //我的关注数据
     static func loadMyConcern(completionHandler:@escaping (_ concerns:[MyConcern])->())
     
+    ///获取用户详情数据
+    static func loadUserDetail(user_id:Int,completionHandler:@escaping (_ userDetailData:UserDetail)->())
+    
+    ///已关注用户，取消关注
+    static func loadRelationUnfollow(user_id:Int,completionHandler:@escaping (_ user:ConcernUser)->())
+    
+    ///点击关注按钮，关注用户
+    static func loadRelationFollow(user_id:Int,completionHandler:@escaping (_ user:ConcernUser)->())
+    
+    ///点击了关注按钮，就会出现相关推荐数据
+    static func loadRelationUserRecommend(user_id:Int, completionHandler:@escaping (_ userCard:[UserCard])->())
+    
 }
 
 extension NetworkToolProtocol {
     //--------------------------------home 首页---------------------------------
-    //    //首页顶部新闻标题数据数据
+    ///首页顶部新闻标题数据数据
     static func loadHomeNewsTitleData(completionHandler:@escaping (_ newsTitles:[HomeNewsTitle])->()) {
         
         let url = BASE_URL + "/article/category/get_subscribed/v1/?"
@@ -64,8 +77,6 @@ extension NetworkToolProtocol {
                 
             }
             
-            
-            
         }
         
         
@@ -79,7 +90,7 @@ extension NetworkToolProtocol {
     
     
     //--------------------------------mine 我的---------------------------------
-    //我的界面cell数据
+    ///我的界面cell数据
     static func loadMyCellData(completionHandler:@escaping (_ sections:[[MyCellModel]])->()){
         
         let url = BASE_URL + "/user/tab/tabs/?"
@@ -115,10 +126,10 @@ extension NetworkToolProtocol {
             }
         }
     }
-    //我的关注数据
+    ///我的关注数据
     static func loadMyConcern(completionHandler:@escaping (_ concerns:[MyConcern])->()){
         
-        let url = BASE_URL + "/concern/v2/follow/my_follow/??"
+        let url = BASE_URL + "/concern/v2/follow/my_follow/?"
         let params  = ["device_id":device_id]
         
         Alamofire.request(url,parameters: params).responseJSON { (response) in
@@ -143,12 +154,154 @@ extension NetworkToolProtocol {
                         
                     }
                     
+                    
+//                    completionHandler(datas.flatMap({
+//                        MyConcern.deserialize(from: $0 as? NSDictionary)
+//                    }))
+                    
                     completionHandler(concernsArray)
                    
                 }
                
             }
            
+        }
+        
+    }
+    
+    
+    ///获取用户详情数据
+    static func loadUserDetail(user_id:Int,completionHandler:@escaping (_ userDetailData:UserDetail)->()){
+        
+        let url = BASE_URL + "/user/profile/homepage/v4/?"
+        let params  = ["device_id":device_id,
+                       "user_id" :user_id,
+                       "iid": IID
+                       ]
+        
+        Alamofire.request(url,parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                //网络错误
+                
+                return
+            }
+            
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else {
+                    return
+                }
+                if let data = json["data"].dictionaryObject {
+                    let userDetailModel = UserDetail.deserialize(from: data as NSDictionary)
+                    completionHandler(userDetailModel!)
+                    }
+                }
+            }
+        }
+    
+    
+    
+    ///已关注用户，取消关注
+    static func loadRelationUnfollow(user_id:Int,completionHandler:@escaping (_ user:ConcernUser)->()){
+        
+        let url = BASE_URL + "/2/relation/unfollow/?"
+        let params  = ["device_id":device_id,
+                       "user_id" :user_id,
+                       "iid": IID
+        ]
+        
+        Alamofire.request(url,parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                //网络错误
+                return
+            }
+            
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else {
+                    
+                    if let data = json["data"].dictionaryObject {
+                        SVProgressHUD.showInfo(withStatus: data["description"] as? String)
+                        SVProgressHUD.setForegroundColor(UIColor.white)
+                        SVProgressHUD.setBackgroundColor(UIColor.init(rgbValueFromHex: 0xf5f5f5))
+                    }
+                    
+                    return
+                }
+                if let data = json["data"].dictionaryObject {
+                    let userDetailModel = ConcernUser.deserialize(from: data["user"] as? NSDictionary)
+                    completionHandler(userDetailModel!)
+                }
+            }
+        }
+    }
+    
+    
+    ///点击关注按钮，关注用户
+    static func loadRelationFollow(user_id:Int,completionHandler:@escaping (_ user:ConcernUser)->()){
+        
+        let url = BASE_URL + "/2/relation/follow/v2/?"
+        let params  = ["device_id":device_id,
+                       "user_id" :user_id,
+                       "iid": IID
+        ]
+        
+        Alamofire.request(url,parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                //网络错误
+                return
+            }
+            
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else {
+                    return
+                }
+                if let data = json["data"].dictionaryObject {
+                    let userDetailModel = ConcernUser.deserialize(from: data["user"] as? NSDictionary)
+                    completionHandler(userDetailModel!)
+                }
+            }
+        }
+    }
+    
+    
+    ///点击了关注按钮，就会出现相关推荐数据
+    static func loadRelationUserRecommend(user_id:Int, completionHandler:@escaping (_ userCard:[UserCard])->()){
+        
+        let url = BASE_URL + "/user/relation/user_recommend/v1/supplement_recommends/?"
+        let params = ["device_id": device_id,
+                      "follow_user_id": user_id,
+                      "iid": IID,
+                      "scene": "follow",
+                      "source": "follow"] as [String : Any]
+        
+        Alamofire.request(url,parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                //网络错误
+                return
+            }
+            
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["err_no"] == 0 else {
+                    return
+                }
+                if let user_cards = json["user_cards"].arrayObject {
+                    var userCardsArray = [UserCard]()
+                    
+                    for data in user_cards {
+                        
+                        let userCardModel = UserCard.deserialize(from: data as? NSDictionary)
+                        userCardsArray.append(userCardModel!)
+                        
+                    }
+                    completionHandler(userCardsArray)
+                    
+                }
+                
+            }
+            
         }
         
     }

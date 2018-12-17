@@ -13,6 +13,7 @@ class OffLineDownLoadCell: UITableViewCell,RegisterCellOrNib {
     var homeNewsTitle: HomeNewsTitle? {
         didSet{
             titleLabel.text = homeNewsTitle?.name
+            rightImageView.theme_image = (homeNewsTitle?.selected)! ? "images.air_download_option_press" : "images.air_download_option"
         }
     }
     
@@ -26,6 +27,9 @@ class OffLineDownLoadCell: UITableViewCell,RegisterCellOrNib {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .none
+        theme_backgroundColor = "colors.cellBackfroundColor"
+        rightImageView.theme_image = "images.air_download_option_press"
+        titleLabel.theme_textColor = "colors.black"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

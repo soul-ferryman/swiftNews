@@ -8,7 +8,16 @@
 
 import UIKit
 
+protocol MyFirstScetionCellDelegate: class {
+    //点击了第几个cell
+    func MyFirstSectionCell(_ firstCell: MyFirstScetionCell, myConcern:MyConcern)
+}
+
 class MyFirstScetionCell: UITableViewCell ,RegisterCellOrNib {
+    
+    
+    weak var delegate:MyFirstScetionCellDelegate?
+    
     
     //标题
     @IBOutlet weak var leftLabel: UILabel!
@@ -97,6 +106,13 @@ extension MyFirstScetionCell: UICollectionViewDelegate,UICollectionViewDataSourc
         cell.myConcern = myConcerns[indexPath.item]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let myConcern = myConcerns[indexPath.item]
+        
+        delegate?.MyFirstSectionCell(self, myConcern: myConcern)
     }
     
 }

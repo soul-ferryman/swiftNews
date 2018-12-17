@@ -24,12 +24,12 @@ class MineViewController: UITableViewController {
     var headerView = MyHeaderView.headerView()
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
+        super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.isHidden = false
     }
     
@@ -129,7 +129,7 @@ extension MineViewController{
                 cell.myConcerns = concerns
             }
             
-            
+            cell.delegate = self
             return cell
             
         }
@@ -157,5 +157,18 @@ extension MineViewController{
     }
     
     
+}
+
+extension MineViewController:MyFirstScetionCellDelegate {
+    //点击了第几个cell
+    func MyFirstSectionCell(_ firstCell: MyFirstScetionCell, myConcern:MyConcern) {
+        
+        let userDetailVC = UserDetailViewController()
+        
+        userDetailVC.userId = myConcern.userid ?? 0
+        
+        self.navigationController?.pushViewController(userDetailVC, animated: true)
+        
+    }
 }
 

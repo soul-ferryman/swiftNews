@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		046EB0CA21C39F0900E1EE52 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EB0C921C39F0900E1EE52 /* SQLiteManager.swift */; };
+		0490070B21C74D3D00A32718 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490070921C74D3D00A32718 /* UserDetailViewController.swift */; };
+		0490070C21C74D3D00A32718 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0490070A21C74D3D00A32718 /* UserDetailViewController.xib */; };
+		0490070E21C7503700A32718 /* UserDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490070D21C7503700A32718 /* UserDetailHeader.swift */; };
+		0490071021C7504D00A32718 /* UserDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0490070F21C7504D00A32718 /* UserDetailHeader.xib */; };
+		0490071221C791A200A32718 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490071121C791A200A32718 /* UserDetail.swift */; };
 		04D3443B21C23B54007B08B7 /* OffLineDownLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3443A21C23B54007B08B7 /* OffLineDownLoadViewController.swift */; };
 		04D3443E21C23C00007B08B7 /* OffLineDownLoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3443C21C23C00007B08B7 /* OffLineDownLoadCell.swift */; };
 		04D3443F21C23C00007B08B7 /* OffLineDownLoadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D3443D21C23C00007B08B7 /* OffLineDownLoadCell.xib */; };
@@ -71,6 +76,11 @@
 
 /* Begin PBXFileReference section */
 		046EB0C921C39F0900E1EE52 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
+		0490070921C74D3D00A32718 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		0490070A21C74D3D00A32718 /* UserDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
+		0490070D21C7503700A32718 /* UserDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailHeader.swift; sourceTree = "<group>"; };
+		0490070F21C7504D00A32718 /* UserDetailHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailHeader.xib; sourceTree = "<group>"; };
+		0490071121C791A200A32718 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		04D3443A21C23B54007B08B7 /* OffLineDownLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffLineDownLoadViewController.swift; sourceTree = "<group>"; };
 		04D3443C21C23C00007B08B7 /* OffLineDownLoadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffLineDownLoadCell.swift; sourceTree = "<group>"; };
 		04D3443D21C23C00007B08B7 /* OffLineDownLoadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffLineDownLoadCell.xib; sourceTree = "<group>"; };
@@ -351,6 +361,8 @@
 				04D3443A21C23B54007B08B7 /* OffLineDownLoadViewController.swift */,
 				04DE2CC521B65EC400D634A3 /* MoreLoginViewController.swift */,
 				04DE2CC721B6641E00D634A3 /* MoreLoginViewController.storyboard */,
+				0490070921C74D3D00A32718 /* UserDetailViewController.swift */,
+				0490070A21C74D3D00A32718 /* UserDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -360,6 +372,7 @@
 			children = (
 				04DE2CB121B620C200D634A3 /* MyCellModel.swift */,
 				04DEA29621BE012B00E58D78 /* SettingModel.swift */,
+				0490071121C791A200A32718 /* UserDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -379,6 +392,8 @@
 				04DEA29921BE083200E58D78 /* SettingCell.xib */,
 				04D3443C21C23C00007B08B7 /* OffLineDownLoadCell.swift */,
 				04D3443D21C23C00007B08B7 /* OffLineDownLoadCell.xib */,
+				0490070D21C7503700A32718 /* UserDetailHeader.swift */,
+				0490070F21C7504D00A32718 /* UserDetailHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,8 +564,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0490071021C7504D00A32718 /* UserDetailHeader.xib in Resources */,
 				04DEA1E421B5294800B05143 /* default_theme.plist in Resources */,
 				04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */,
+				0490070C21C74D3D00A32718 /* UserDetailViewController.xib in Resources */,
 				04DE2CC021B620C300D634A3 /* MyOtherCell.xib in Resources */,
 				04D3443F21C23C00007B08B7 /* OffLineDownLoadCell.xib in Resources */,
 				04D50805219A614B005DE338 /* Assets.xcassets in Resources */,
@@ -595,6 +612,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -608,6 +626,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -655,6 +674,7 @@
 				046EB0CA21C39F0900E1EE52 /* SQLiteManager.swift in Sources */,
 				04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */,
 				04D5085A219A8489005DE338 /* VideoViewController.swift in Sources */,
+				0490070B21C74D3D00A32718 /* UserDetailViewController.swift in Sources */,
 				04D50853219A8489005DE338 /* HuoShanViewController.swift in Sources */,
 				04D5085F219A84B6005DE338 /* MyNavigationController.swift in Sources */,
 				04D50867219AB363005DE338 /* MyTabBar.swift in Sources */,
@@ -662,8 +682,10 @@
 				04D50858219A8489005DE338 /* HomeViewController.swift in Sources */,
 				04D50860219A84B6005DE338 /* MyTabBarController.swift in Sources */,
 				04FD9EAE21AB8CB300127FC0 /* Const.swift in Sources */,
+				0490071221C791A200A32718 /* UserDetail.swift in Sources */,
 				04DE2CBD21B620C300D634A3 /* MyHeaderView.swift in Sources */,
 				04FD9EB121AB8E3C00127FC0 /* UIColor+Extension.swift in Sources */,
+				0490070E21C7503700A32718 /* UserDetailHeader.swift in Sources */,
 				04DE2CC321B620C300D634A3 /* MyOtherCell.swift in Sources */,
 				04EC939C21B1125900440FB0 /* UITableView+Extension.swift in Sources */,
 				04EC939E21B1141B00440FB0 /* UICollectionView+Extension.swift in Sources */,

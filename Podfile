@@ -24,5 +24,7 @@ target 'News' do
  pod 'RxCocoa'
  
  pod 'SQLite.swift'
+ 
+ pod 'SVProgressHUD'
 
 end

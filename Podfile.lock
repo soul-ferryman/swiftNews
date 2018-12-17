@@ -11,6 +11,7 @@ PODS:
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
+  - SVProgressHUD (2.2.5)
   - SwiftTheme (0.4.3)
   - SwiftyJSON (4.1.0)
 
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SQLite.swift
+  - SVProgressHUD
   - SwiftTheme
   - SwiftyJSON
 
@@ -35,6 +37,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SQLite.swift
+    - SVProgressHUD
     - SwiftTheme
     - SwiftyJSON
 
@@ -47,9 +50,10 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftTheme: 628345b948068a48d330d76dffb1a990ea5f90aa
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: fe5f0e20192d7d1fbf28205e7f048ae5580c1777
+PODFILE CHECKSUM: 93232667abccb5820d91a04815a2030ef06afbfc
 
 COCOAPODS: 1.5.3

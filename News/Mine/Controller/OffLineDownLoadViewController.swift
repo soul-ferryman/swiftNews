@@ -10,18 +10,20 @@ import UIKit
 
 class OffLineDownLoadViewController: UITableViewController {
     
-    var dataArray = [HomeNewsTitle]()
+    //标题数组
+    fileprivate var dataArray = [HomeNewsTitle]()
     
+    //标题数据表
+    fileprivate let newsTitleTable = NewsTitleTable()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
         
-        NetworkTool.loadHomeNewsTitleData { (homeNewsTitles) in
-            self.dataArray = homeNewsTitles
-            self.tableView.reloadData()
-        }
+        //从数据库中取数据
+        dataArray = newsTitleTable.selectAll()
+        
     }
     
     
@@ -65,6 +67,22 @@ class OffLineDownLoadViewController: UITableViewController {
         cell.homeNewsTitle = self.dataArray[indexPath.row]
         return cell
         
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //取出数组中的地row个对象
+        var homeNewsTitle = dataArray[indexPath.row];
+        //取反
+        homeNewsTitle.selected = !homeNewsTitle.selected
+        //更新数据库表数据
+        newsTitleTable.update(homeNewsTitle)
+        //替换数组中的数据
+        dataArray[indexPath.row] = homeNewsTitle
+        
+        //取出第row个cell 改变cell的图片
+        let cell = tableView.cellForRow(at: indexPath) as! OffLineDownLoadCell
+        cell.rightImageView.theme_image = homeNewsTitle.selected ? "images.air_download_option_press" : "images.air_download_option"
     }
 
     
