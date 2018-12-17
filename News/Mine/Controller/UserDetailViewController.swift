@@ -23,7 +23,6 @@ class UserDetailViewController: UIViewController {
     var userDetail:UserDetail?
     
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -56,6 +55,8 @@ class UserDetailViewController: UIViewController {
             self.userDetail = userDetail
             self.headerView.userDetail = userDetail
         }
+        
+        print("home")
         
     }
     
