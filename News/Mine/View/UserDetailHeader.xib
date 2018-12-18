@@ -150,7 +150,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s19-Da-hiL">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s19-Da-hiL">
                             <rect key="frame" x="330" y="142" width="30" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="2BG-AG-wdL"/>
@@ -222,6 +222,7 @@
                         <constraint firstItem="AgN-YO-E50" firstAttribute="leading" secondItem="Eew-WL-eEC" secondAttribute="leading" id="DK3-zG-h1b"/>
                         <constraint firstItem="m8j-Mn-Xgy" firstAttribute="leading" secondItem="ZaD-0E-eRn" secondAttribute="trailing" constant="3" id="Dmc-he-o2X"/>
                         <constraint firstItem="s19-Da-hiL" firstAttribute="centerY" secondItem="r6H-N5-2oo" secondAttribute="centerY" id="EnH-9X-WFP"/>
+                        <constraint firstItem="en9-AS-qGL" firstAttribute="height" secondItem="XqQ-mA-maU" secondAttribute="height" id="H3n-SG-ETq"/>
                         <constraint firstItem="yBQ-wR-6Il" firstAttribute="top" secondItem="Eew-WL-eEC" secondAttribute="top" constant="-36" id="Ig1-Qt-ez1"/>
                         <constraint firstItem="en9-AS-qGL" firstAttribute="centerY" secondItem="XqQ-mA-maU" secondAttribute="centerY" id="Igk-qA-zuj"/>
                         <constraint firstItem="XqQ-mA-maU" firstAttribute="top" secondItem="ZaD-0E-eRn" secondAttribute="bottom" constant="10" id="NAQ-N0-myk"/>
@@ -271,6 +272,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="areaButton" destination="emF-9p-E2Z" id="emc-G7-DIZ"/>
+                <outlet property="areaButtonHeight" destination="JNs-7r-IZX" id="hhU-YL-7mB"/>
+                <outlet property="areaButtonTop" destination="eGg-UG-Hya" id="QPm-CB-Fhi"/>
                 <outlet property="avatarImageView" destination="yBQ-wR-6Il" id="BVQ-zY-o8y"/>
                 <outlet property="backgroundImageView" destination="LGe-Xl-O6p" id="O1V-mh-aIq"/>
                 <outlet property="baseView" destination="Eew-WL-eEC" id="DEH-7n-lzL"/>
@@ -278,8 +281,10 @@
                 <outlet property="concernButton" destination="lbG-Zr-8Jm" id="z5M-NL-vqA"/>
                 <outlet property="descriptionLabel" destination="r6H-N5-2oo" id="xCm-B4-5XX"/>
                 <outlet property="descriptionLabelHeight" destination="7rc-Pu-QVh" id="cvt-PW-WQe"/>
+                <outlet property="followersCountContentLabel" destination="cgF-FC-Wqf" id="e6V-La-PLV"/>
                 <outlet property="followersCountLabel" destination="nap-bP-gY0" id="BqT-1O-mXE"/>
-                <outlet property="followingsCountLabel" destination="cgF-FC-Wqf" id="CpH-d6-d4c"/>
+                <outlet property="followingsCountLabel" destination="3Wn-QF-tEe" id="q1Q-PO-pj3"/>
+                <outlet property="nameLabel" destination="ZaD-0E-eRn" id="Jn7-5E-qjK"/>
                 <outlet property="recommendButton" destination="5h1-hO-4CA" id="72E-pX-UoS"/>
                 <outlet property="recommendButtonTrailing" destination="cPk-AZ-ETw" id="4Jm-uF-avi"/>
                 <outlet property="recommendButtonWidth" destination="TPJ-Nv-qUR" id="8rr-Pv-f7g"/>

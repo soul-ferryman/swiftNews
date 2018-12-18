@@ -54,14 +54,14 @@ struct UserDetail:HandyJSON {
         return String(format: "%.1f万", Float(followers_count)/10000.0)
     }
     
-    var followings_count: Int = 0// 粉丝 470837
+    var followings_count: Int = 0//  470837
     
     var followingsCount:String?{
-        guard followers_count >= 10000 else {
-            return String(describing: followers_count)
+        guard followings_count >= 10000 else {
+            return String(describing: followings_count)
         }
         
-        return String(format: "%.1f万", Float(followers_count)/10000.0)
+        return String(format: "%.1f万", Float(followings_count)/10000.0)
     }
     
     var media_type: Int = 0

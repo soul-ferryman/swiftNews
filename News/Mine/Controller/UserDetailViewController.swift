@@ -54,9 +54,16 @@ class UserDetailViewController: UIViewController {
         NetworkTool.loadUserDetail(user_id: userId) { (userDetail) in
             self.userDetail = userDetail
             self.headerView.userDetail = userDetail
+            if userDetail.bottom_tab.count == 0 {
+                self.bottomViewBotton.constant = 0
+                self.headerView.layoutIfNeeded()
+            }else {
+                //赋值到bottomview上
+            }
+            
+            
+            
         }
-        
-        print("home")
         
     }
     
