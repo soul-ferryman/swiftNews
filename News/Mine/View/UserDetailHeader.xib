@@ -51,7 +51,7 @@
                                 <constraint firstAttribute="height" constant="19" id="alf-HR-vt9"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h1-hO-4CA" customClass="AnimatableButton" customModule="IBAnimatable">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h1-hO-4CA" customClass="AnimatableButton" customModule="IBAnimatable">
                             <rect key="frame" x="332" y="15" width="28" height="28"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="28" id="TPJ-Nv-qUR"/>
@@ -69,6 +69,9 @@
                                     <real key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="recommendButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="I48-Ie-21A"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbG-Zr-8Jm" customClass="AnimatableButton" customModule="IBAnimatable">
                             <rect key="frame" x="255" y="15" width="72" height="28"/>
@@ -84,6 +87,9 @@
                                     <real key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="concernButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kp9-KL-pLi"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m43-cm-Q3i">
                             <rect key="frame" x="200" y="15" width="45" height="28"/>
@@ -95,6 +101,9 @@
                             <state key="normal" title="发私信">
                                 <color key="titleColor" red="0.28235294117647058" green="0.39215686274509803" blue="0.58431372549019611" alpha="1" colorSpace="deviceRGB"/>
                             </state>
+                            <connections>
+                                <action selector="sendMailButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="qfd-UA-9JJ"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AgN-YO-E50">
                             <rect key="frame" x="0.0" y="52" width="375" height="0.0"/>
@@ -160,6 +169,9 @@
                             <state key="normal" title="展开">
                                 <color key="titleColor" red="0.28235294119999998" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="deviceRGB"/>
                             </state>
+                            <connections>
+                                <action selector="unfoldButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zml-iw-oUa"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgF-FC-Wqf">
                             <rect key="frame" x="15" y="173" width="37.5" height="18"/>

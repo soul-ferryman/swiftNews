@@ -14,6 +14,11 @@ class SettingViewController: UITableViewController {
     //存储plist文件中的数据
     var sections = [[SettingModel]]()
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -29,6 +29,9 @@ class UserDetailHeader: UIView {
             }
             
             concernButton.isSelected = userDetail!.is_following
+            concernButton.theme_backgroundColor = userDetail!.is_following ? "colors.userDetailFollowingConcernBtnBgColor" : "colors.globalRedColor"
+            concernButton.borderColor = userDetail!.is_following ? .grayColor232() : .globalRedColor()
+            concernButton.borderWidth = userDetail!.is_following ? 1 : 0
             if userDetail!.area == "" {
                 areaButton.isHidden = true
                 areaButtonHeight.constant = 0
@@ -44,7 +47,8 @@ class UserDetailHeader: UIView {
                 unfoldButtonWidth.constant = 40.0
             }
             
-            
+            recommendButtonWidth.constant = 0
+            recommendButtonTrailing.constant = 10.0
             
             
             followersCountContentLabel.text = userDetail!.followingsCount
@@ -115,6 +119,30 @@ class UserDetailHeader: UIView {
    
     override func awakeFromNib() {
         //
+        
+        concernButton.setTitle("关注", for: .normal)
+        concernButton.setTitle("已关注", for: .selected)
+        
+        //设置主题颜色
+        theme_backgroundColor = "colors.cellBackfroundColor"
+        baseView.theme_backgroundColor = "colors.cellBackfroundColor"
+        avatarImageView.layer.theme_borderColor = "colors.cellBackfroundColor"
+        topTabView.theme_backgroundColor = "colors.cellBackfroundColor"
+        separatorView.theme_backgroundColor = "colors.separatorViewColor"
+        nameLabel.theme_textColor = "colors.black"
+        sendMailButton.theme_setTitleColor("colors.userDetailSendMailTextColor", forState: .normal)
+//        unfoldButton.theme_setTitleColor("colors.userDetailSendMailTextColor", forState: .normal)
+        followersCountContentLabel.theme_textColor = "colors.userDetailSendMailTextColor"
+        followingsCountLabel.theme_textColor = "colors.userDetailSendMailTextColor"
+        concernButton.theme_setTitleColor("colors.userDetailConcernButtonTextColor", forState: .normal)
+        concernButton.theme_setTitleColor("colors.userDetailConcernButtonSelectedTextColor", forState: .selected)
+        verifiedAgencyLabel.theme_textColor = "colors.verifiedAgencyTextColor"
+        verifiedContentLabel.theme_textColor = "colors.black"
+        descriptionLabel.theme_textColor = "colors.black"
+        descriptionLabel.theme_textColor = "colors.black"
+        toutiaohaoImageView.theme_image = "images.toutiaohao"
+        
+        
     }
     
     //类方法
@@ -122,7 +150,87 @@ class UserDetailHeader: UIView {
         return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.last as! UserDetailHeader
     }
     
+    //发私信点击
+    @IBAction func sendMailButtonClicked(_ sender: Any) {
+    }
+    //关注按钮点击
+    @IBAction func concernButtonClicked(_ sender: AnimatableButton) {
+        
+        if sender.isSelected {
+            //已经关注，点击取消关注
+            NetworkTool.loadRelationUnfollow(user_id: userDetail!.user_id) { (_) in
+                sender.isSelected = !sender.isSelected
+                self.concernButton.theme_backgroundColor = "colors.globalRedColor"
+                self.recommendButton.isHidden = true
+                self.recommendButtonWidth.constant = 0
+                self.recommendButton.isSelected = false
+                self.recommendButtonTrailing.constant = 0
+                self.recommendViewHeight.constant = 0
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.recommendButton.imageView?.transform = .identity
+                    self.layoutIfNeeded()
+                },completion: { (_) in
+                    self.resetLayout()
+                })
+            }
+            
+        }else {
+            //未关注，点击则关注
+            NetworkTool.loadRelationFollow(user_id: userDetail!.user_id) { (_) in
+                //
+                sender.isSelected = !sender.isSelected
+                self.concernButton.theme_backgroundColor =  "colors.userDetailFollowingConcernBtnBgColor"
+                self.recommendButton.isHidden = false
+                self.recommendButtonWidth.constant = 28
+                self.recommendButton.isSelected = true
+                self.recommendButtonTrailing.constant = 15.0
+                self.recommendViewHeight.constant = 223
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.layoutIfNeeded()
+                },completion: { (_) in
+                    self.resetLayout()
+                    NetworkTool.loadRelationUserRecommend(user_id: self.userDetail!.user_id, completionHandler: { (userCard) in
+                        //
+                    })
+                })
+            }
+        }
+        
+    }
+    //推荐关注按钮点击
+    @IBAction func recommendButtonClicked(_ sender: AnimatableButton) {
+        
+        sender.isSelected = !sender.isSelected
+        
+        recommendViewHeight.constant = sender.isSelected ? 223.0 : 0
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            sender.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(sender.isSelected ? 0 :Double.pi))
+            self.layoutIfNeeded()
+        }) { (_) in
+            self.resetLayout()
+        }
+        
+    }
+    //展开按钮
+    @IBAction func unfoldButtonClicked(_ sender: Any) {
+        
+        unfoldButton.isHidden = true
+        unfoldButtonWidth.constant = 0;
+        
+        descriptionLabelHeight.constant = userDetail!.descriptionHeight!
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.layoutIfNeeded()
+        }) { (_) in
+            self.resetLayout()
+        }
+        
+    }
     
-    
+    func resetLayout(){
+        baseView.height = topTabView.frame.maxY
+        height = baseView.frame.maxY
+    }
     
 }

@@ -4,6 +4,20 @@
 <dict>
 	<key>colors</key>
 	<dict>
+		<key>userDetailFollowingConcernBtnBgColor</key>
+		<string>#373737</string>
+		<key>verifoiedAgencyTextColor</key>
+		<string>#6f5b10</string>
+		<key>userDetailSendMailTextColor</key>
+		<string>#6C7589</string>
+		<key>userDetailConcernButtonTextColor</key>
+		<string>#c7c7c7</string>
+		<key>userDetailConcernButtonSelectedTextColor</key>
+		<string>#717171</string>
+		<key>userDetailFollowingBtnBgColor</key>
+		<string>#373737</string>
+		<key>globalRedColor</key>
+		<string>#965757</string>
 		<key>loginMobileViewBackgroundColor</key>
 		<string>#cacaca</string>
 		<key>navgationBarTintColor</key>
@@ -31,6 +45,16 @@
 	</dict>
 	<key>images</key>
 	<dict>
+		<key>loading_12x12_</key>
+		<string>loading_night_12x12_</string>
+		<key>arrow_up_16_16x14_</key>
+		<string>arrow_up_night_16_16x14_</string>
+		<key>place_10x12_</key>
+		<string>place_night_10x12_</string>
+		<key>tabbar-options</key>
+		<string>tabbar-options_ningt_9x9_</string>
+		<key>toutiaohao</key>
+		<string>toutiaohao_ningt_34x14_</string>
 		<key>air_download_option</key>
 		<string>air_download_option_night_20x20_</string>
 		<key>air_download_option_press</key>

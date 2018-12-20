@@ -27,6 +27,7 @@ class MineViewController: UITableViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
