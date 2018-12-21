@@ -55,7 +55,7 @@
 	</dict>
 	<key>colors</key>
 	<dict>
-		<key>verifoiedAgencyTextColor</key>
+		<key>verifiedAgencyTextColor</key>
 		<string>#e6b740</string>
 		<key>userDetailFollowingConcernBtnBgColor</key>
 		<string>#ffffff</string>

@@ -6,7 +6,7 @@
 	<dict>
 		<key>userDetailFollowingConcernBtnBgColor</key>
 		<string>#373737</string>
-		<key>verifoiedAgencyTextColor</key>
+		<key>verifiedAgencyTextColor</key>
 		<string>#6f5b10</string>
 		<key>userDetailSendMailTextColor</key>
 		<string>#6C7589</string>
