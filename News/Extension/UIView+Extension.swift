@@ -8,6 +8,15 @@
 
 import UIKit
 
+protocol NibLoadable {}
+
+extension NibLoadable {
+    
+    static func loadViewFromeNib()-> Self {
+        return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.last as! Self
+    }
+}
+
 protocol RegisterCellOrNib {}
 
 extension RegisterCellOrNib {

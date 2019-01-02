@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Detail Bottom Pop Controller-->
+        <scene sceneID="Dl8-FG-FsU">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailBottomPopController" id="GFN-TR-JYj" customClass="UserDetailBottomPopController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HBb-PR-Je6"/>
+                        <viewControllerLayoutGuide type="bottom" id="kaT-Jd-Yvm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PCa-Jb-hhi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popup_118x58_" translatesAutoresizingMaskIntoConstraints="NO" id="G8Q-DT-fFM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9y8-MD-edi">
+                                <rect key="frame" x="16" y="30" width="343" height="622"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9y8-MD-edi" firstAttribute="leading" secondItem="PCa-Jb-hhi" secondAttribute="leadingMargin" id="26o-zr-wxe"/>
+                            <constraint firstItem="kaT-Jd-Yvm" firstAttribute="top" secondItem="G8Q-DT-fFM" secondAttribute="bottom" id="CP6-SR-nNL"/>
+                            <constraint firstItem="kaT-Jd-Yvm" firstAttribute="top" secondItem="9y8-MD-edi" secondAttribute="bottom" constant="15" id="CgQ-P3-G3Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9y8-MD-edi" secondAttribute="trailing" id="EYJ-jB-rHP"/>
+                            <constraint firstItem="G8Q-DT-fFM" firstAttribute="top" secondItem="HBb-PR-Je6" secondAttribute="bottom" id="J7w-Rv-SAW"/>
+                            <constraint firstAttribute="trailing" secondItem="G8Q-DT-fFM" secondAttribute="trailing" id="Wvn-g0-AzK"/>
+                            <constraint firstItem="9y8-MD-edi" firstAttribute="top" secondItem="HBb-PR-Je6" secondAttribute="bottom" constant="10" id="jss-WZ-kWt"/>
+                            <constraint firstItem="G8Q-DT-fFM" firstAttribute="leading" secondItem="PCa-Jb-hhi" secondAttribute="leading" id="uRg-wI-DP5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="9y8-MD-edi" id="iRa-42-IhA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLc-co-736" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490.39999999999998" y="200.14992503748127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="popup_118x58_" width="118" height="58"/>
+    </resources>
+</document>

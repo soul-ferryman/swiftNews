@@ -59,6 +59,8 @@ class UserDetailViewController: UIViewController {
                 self.headerView.layoutIfNeeded()
             }else {
                 //赋值到bottomview上
+                self.bottomView.addSubview(self.myBottomView)
+                self.myBottomView.bottomTabs = userDetail.bottom_tab
             }
             
             
@@ -69,8 +71,60 @@ class UserDetailViewController: UIViewController {
     
     //懒加载
     fileprivate lazy var headerView:UserDetailHeader = {
-        let headerView = UserDetailHeader.headerView()
+        let headerView = UserDetailHeader.loadViewFromeNib()
         return headerView
     }()
+    
+    fileprivate lazy var myBottomView:UserDetailBottomView = {
+        let myBottomView = UserDetailBottomView(frame: self.bottomView.bounds)
+        myBottomView.delegate = self
+        return myBottomView
+    }()
+    
+   
 
+}
+
+extension UserDetailViewController:UserDetailBottomViewDelegate {
+    
+    //bottomButton 点击
+    func bottomView(clicked button:UIButton, bottomTab:BottomTab) {
+        
+        let bottomPushVC = UserDetailBottomPushController()
+        bottomPushVC.navigationItem.title = "网页浏览"
+        
+        if bottomTab.children.count == 0 {
+            //直接跳转到下一控制器
+            bottomPushVC.url = bottomTab.value
+            navigationController?.pushViewController(bottomPushVC, animated: true)
+            
+        }else {
+            //弹出子视图
+            
+            let sb = UIStoryboard(name: "\(UserDetailBottomPopController.self)", bundle: nil)
+            let popoverVC = sb.instantiateViewController(withIdentifier: "\(UserDetailBottomPopController.self)") as! UserDetailBottomPopController
+            popoverVC.bottomTabChildren = bottomTab.children
+            popoverVC.didSelectedChild = {(bottomTabChildren:BottomTabChildren) in
+                bottomPushVC.url = bottomTabChildren.value
+                self.navigationController?.pushViewController(bottomPushVC, animated: true)
+            }
+            
+            //自定义转场动画
+            popoverVC.modalPresentationStyle = .custom
+            let popoverAnimator = PopoverAnimator()
+            //转换frame
+            let rect = myBottomView.convert(button.frame, to: view)
+            let popWidth = (ScreenWidth - CGFloat(userDetail!.bottom_tab.count + 1)*20)/CGFloat(userDetail!.bottom_tab.count)
+            let popX = CGFloat(button.tag) * (popWidth + 20) + 20
+            let popHeight = CGFloat(bottomTab.children.count)  * 40 + 25
+            popoverAnimator.presentnFrame = CGRect(x: popX, y: rect.origin.y - popHeight, width: popWidth, height: popHeight)
+            popoverVC.transitioningDelegate = popoverAnimator
+            
+            
+            present(popoverVC, animated: true, completion: nil)
+            
+        }
+    }
+    
+   
 }

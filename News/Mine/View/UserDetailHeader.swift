@@ -10,7 +10,7 @@ import UIKit
 import IBAnimatable
 import Kingfisher
 
-class UserDetailHeader: UIView {
+class UserDetailHeader: UIView, NibLoadable {
     
     
     var userDetail:UserDetail? {
@@ -55,12 +55,62 @@ class UserDetailHeader: UIView {
             
             followingsCountLabel.text = userDetail!.followersCount
             
+            //添加按钮
+            if userDetail!.top_tab.count > 0 {
+                
+                for (index, topTab) in userDetail!.top_tab.enumerated() {
+                    //按钮
+                    let button = UIButton(frame: CGRect(x: CGFloat(index) * topTabButtonWidth, y: 0, width: topTabButtonWidth, height: scrollView.height))
+                    button.setTitle(topTab.show_name, for: .normal)
+                    button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+                    button.theme_setTitleColor("colors.black", forState: .normal)
+                    button.theme_setTitleColor("colors.globalRedColor", forState: .selected)
+                    button.addTarget(self, action: #selector(topTabButtonClicked), for: .touchUpInside)
+                    scrollView.addSubview(button)
+                    
+                    if index == 0 {
+                        button.isSelected = true
+                        privorButton = button
+                    }
+                    
+                    if index == userDetail!.top_tab.count-1 {
+                        scrollView.contentSize = CGSize(width: button.frame.maxX, height: scrollView.height)
+                    }
+                }
+                
+                scrollView.addSubview(self.indicatorView)
+                
+            }else {
+                topTabHeight.constant = 0
+                topTabView.isHidden = true
+            }
+            
             
             
             layoutIfNeeded()
             
         }
     }
+    
+    @objc func topTabButtonClicked(button:UIButton) {
+        
+        privorButton?.isSelected = false
+        button.isSelected = !button.isSelected
+        UIView.animate(withDuration: 0.25, animations: {
+            self.indicatorView.centerX = button.centerX
+        }) { (_) in
+            self.privorButton = button
+        }
+        
+    }
+    
+    lazy var indicatorView:UIView  = {
+        let indicatorView = UIView(frame: CGRect(x: (topTabButtonWidth - topTabindicatorWidth)*0.5, y: topTabView.height-2, width: topTabindicatorWidth, height: topTabindicatorHeight))
+        indicatorView.theme_backgroundColor = "colors.globalRedColor"
+        return indicatorView
+    }()
+    
+    weak var privorButton = UIButton()
     
 
     //背景图片
