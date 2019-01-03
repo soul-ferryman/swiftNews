@@ -26,6 +26,10 @@ let dayOrNight = "dayOrNight"
 
 let isIPhoneX :Bool = ScreenHeight >= 812 ? true : false
 
+let newsTitleHeight: CGFloat = 40
+let kMyHeaderViewHeight: CGFloat = 280
+let kUserDetailHeaderBGImageViewHeight: CGFloat = 146
+
 
 //关注的用户详情界面 topTab的按钮的宽度
 let topTabButtonWidth:CGFloat = ScreenWidth * 0.2

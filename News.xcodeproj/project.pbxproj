@@ -54,6 +54,8 @@
 		04E2193221DC8E590069D776 /* UserDetailBottomPopController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E2193121DC8E590069D776 /* UserDetailBottomPopController.storyboard */; };
 		04E2193421DCB8530069D776 /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2193321DCB8530069D776 /* PopoverAnimator.swift */; };
 		04E2193621DCB9DD0069D776 /* MyPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E2193521DCB9DD0069D776 /* MyPresentationController.swift */; };
+		04E6C79A21DDAC8D00DE8D56 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6C79921DDAC8D00DE8D56 /* NavigationBarView.swift */; };
+		04E6C79C21DDACB300DE8D56 /* NavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E6C79B21DDACB300DE8D56 /* NavigationBarView.xib */; };
 		04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939921B1119100440FB0 /* UIView+Extension.swift */; };
 		04EC939C21B1125900440FB0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939B21B1125900440FB0 /* UITableView+Extension.swift */; };
 		04EC939E21B1141B00440FB0 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC939D21B1141B00440FB0 /* UICollectionView+Extension.swift */; };
@@ -134,6 +136,8 @@
 		04E2193121DC8E590069D776 /* UserDetailBottomPopController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetailBottomPopController.storyboard; sourceTree = "<group>"; };
 		04E2193321DCB8530069D776 /* PopoverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		04E2193521DCB9DD0069D776 /* MyPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPresentationController.swift; sourceTree = "<group>"; };
+		04E6C79921DDAC8D00DE8D56 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		04E6C79B21DDACB300DE8D56 /* NavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarView.xib; sourceTree = "<group>"; };
 		04EC939921B1119100440FB0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		04EC939B21B1125900440FB0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		04EC939D21B1141B00440FB0 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
@@ -412,6 +416,8 @@
 				0490070D21C7503700A32718 /* UserDetailHeader.swift */,
 				0490070F21C7504D00A32718 /* UserDetailHeader.xib */,
 				04E2192B21DC5AF00069D776 /* UserDetailBottomView.swift */,
+				04E6C79921DDAC8D00DE8D56 /* NavigationBarView.swift */,
+				04E6C79B21DDACB300DE8D56 /* NavigationBarView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 				04DEA1E421B5294800B05143 /* default_theme.plist in Resources */,
 				04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */,
 				0490070C21C74D3D00A32718 /* UserDetailViewController.xib in Resources */,
+				04E6C79C21DDACB300DE8D56 /* NavigationBarView.xib in Resources */,
 				04DE2CC021B620C300D634A3 /* MyOtherCell.xib in Resources */,
 				04E2193221DC8E590069D776 /* UserDetailBottomPopController.storyboard in Resources */,
 				04D3443F21C23C00007B08B7 /* OffLineDownLoadCell.xib in Resources */,
@@ -707,6 +714,7 @@
 				0490071221C791A200A32718 /* UserDetail.swift in Sources */,
 				04E2192C21DC5AF00069D776 /* UserDetailBottomView.swift in Sources */,
 				04DE2CBD21B620C300D634A3 /* MyHeaderView.swift in Sources */,
+				04E6C79A21DDAC8D00DE8D56 /* NavigationBarView.swift in Sources */,
 				04FD9EB121AB8E3C00127FC0 /* UIColor+Extension.swift in Sources */,
 				0490070E21C7503700A32718 /* UserDetailHeader.swift in Sources */,
 				04DE2CC321B620C300D634A3 /* MyOtherCell.swift in Sources */,

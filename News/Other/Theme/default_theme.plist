@@ -4,6 +4,14 @@
 <dict>
 	<key>images</key>
 	<dict>
+		<key>personal_home_back_black_24x24_</key>
+		<string>personal_home_back_black_24x24_</string>
+		<key>personal_home_back_white_24x24_</key>
+		<string>personal_home_back_white_24x24_</string>
+		<key>new_more_titlebar_24x24_</key>
+		<string>new_more_titlebar_24x24_</string>
+		<key>new_morewhite_titlebar_22x22_</key>
+		<string>new_morewhite_titlebar_22x22_</string>
 		<key>loading_12x12_</key>
 		<string>loading_12x12_</string>
 		<key>arrow_up_16_16x14_</key>

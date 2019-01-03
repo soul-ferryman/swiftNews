@@ -41,7 +41,7 @@ class UserDetailBottomPopController: UIViewController , UITableViewDelegate, UIT
         cell.selectionStyle = .none
         let child = bottomTabChildren[indexPath.row]
         cell.textLabel?.text = child.name
-        cell.textLabel?.textAlignment = .center
+        cell.textLabel?.textAlignment = .center 
         cell.textLabel?.font = UIFont.systemFont(ofSize: 8)
         return cell
         

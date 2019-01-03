@@ -17,6 +17,11 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     @IBOutlet weak var bottomViewBotton: NSLayoutConstraint!
     
+    /// 改变状态栏的字体颜色
+    var changeStatusBarStyle: UIStatusBarStyle = .lightContent {
+        didSet { setNeedsStatusBarAppearanceUpdate() }
+    }
+    
     
     var userId:Int = 0
     
@@ -49,6 +54,8 @@ class UserDetailViewController: UIViewController {
         scrollView.addSubview(headerView)
         scrollView.contentSize = CGSize(width: ScreenWidth, height: 1000)
         bottomViewBotton.constant = isIPhoneX ? 34:0
+        scrollView.delegate = self
+        view.addSubview(navigationView)
         view.layoutIfNeeded()
         
         NetworkTool.loadUserDetail(user_id: userId) { (userDetail) in
@@ -62,8 +69,6 @@ class UserDetailViewController: UIViewController {
                 self.bottomView.addSubview(self.myBottomView)
                 self.myBottomView.bottomTabs = userDetail.bottom_tab
             }
-            
-            
             
         }
         
@@ -81,8 +86,46 @@ class UserDetailViewController: UIViewController {
         return myBottomView
     }()
     
-   
+    fileprivate lazy var navigationView:NavigationBarView = {
+        let navigationView = NavigationBarView.loadViewFromeNib()
+        return navigationView
+    }()
+    
 
+}
+
+extension UserDetailViewController:UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        var offsetY = scrollView.contentOffset.y
+        
+        //图片黏住顶部拉伸
+        if offsetY < -44 {
+            let totalOffset = kUserDetailHeaderBGImageViewHeight + abs(offsetY)
+            let f = totalOffset / kUserDetailHeaderBGImageViewHeight
+            headerView.backgroundImageView.frame = CGRect(x: -ScreenWidth * (f - 1) * 0.5, y: offsetY, width: ScreenWidth * f, height: totalOffset)
+            navigationView.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
+        }else {
+            
+            var alpha:CGFloat = (offsetY + 44)/58
+            alpha = min(alpha, 1.0)
+            navigationView.backgroundColor = UIColor(white: 1.0, alpha: alpha)
+            if alpha == 1.0 {
+                changeStatusBarStyle = .default
+                navigationView.returnButton.theme_setImage("images.personal_home_back_black_24x24_", forState: .normal)
+                navigationView.moreButton.theme_setImage("images.new_more_titlebar_24x24_", forState: .normal)
+            } else {
+                changeStatusBarStyle = .lightContent
+                navigationView.returnButton.theme_setImage("images.personal_home_back_white_24x24_", forState: .normal)
+                navigationView.moreButton.theme_setImage("images.new_morewhite_titlebar_22x22_", forState: .normal)
+            }
+            
+            
+        }
+        
+       
+        
+    }
 }
 
 extension UserDetailViewController:UserDetailBottomViewDelegate {
