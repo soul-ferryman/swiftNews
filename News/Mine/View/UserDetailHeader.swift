@@ -166,6 +166,12 @@ class UserDetailHeader: UIView, NibLoadable {
     //底层view
     @IBOutlet weak var baseView: UIView!
     
+    //自定义的推荐view
+    lazy var relationRecommendView: RelationRecommendView = {
+        let relationRecommendView = RelationRecommendView.loadViewFromeNib()
+        return relationRecommendView
+    }()
+    
    
     override func awakeFromNib() {
         //
@@ -234,13 +240,16 @@ class UserDetailHeader: UIView, NibLoadable {
                 self.recommendButtonWidth.constant = 28
                 self.recommendButton.isSelected = true
                 self.recommendButtonTrailing.constant = 15.0
-                self.recommendViewHeight.constant = 223
+                self.recommendViewHeight.constant = 233
                 UIView.animate(withDuration: 0.25, animations: {
                     self.layoutIfNeeded()
                 },completion: { (_) in
                     self.resetLayout()
                     NetworkTool.loadRelationUserRecommend(user_id: self.userDetail!.user_id, completionHandler: { (userCard) in
                         //
+                        self.recommendView.addSubview(self.relationRecommendView)
+                        self.relationRecommendView.userCards = userCard
+                        
                     })
                 })
             }

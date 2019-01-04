@@ -28,6 +28,10 @@
 		04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5085E219A84B6005DE338 /* AppDelegate.swift */; };
 		04D50867219AB363005DE338 /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D50866219AB363005DE338 /* MyTabBar.swift */; };
 		04D7F5A721C344D1000CC40E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D7F5A621C344D1000CC40E /* libsqlite3.0.tbd */; };
+		04DB9DE121DEF3E500BF5AF7 /* RelationRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB9DE021DEF3E500BF5AF7 /* RelationRecommendView.swift */; };
+		04DB9DE321DEF40400BF5AF7 /* RelationRecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DB9DE221DEF40400BF5AF7 /* RelationRecommendView.xib */; };
+		04DB9DE621DF041200BF5AF7 /* RelationRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB9DE421DF041200BF5AF7 /* RelationRecommendCell.swift */; };
+		04DB9DE721DF041200BF5AF7 /* RelationRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DB9DE521DF041200BF5AF7 /* RelationRecommendCell.xib */; };
 		04DE2CBB21B620C200D634A3 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CAF21B620C200D634A3 /* MineViewController.swift */; };
 		04DE2CBC21B620C300D634A3 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CB121B620C200D634A3 /* MyCellModel.swift */; };
 		04DE2CBD21B620C300D634A3 /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE2CB321B620C200D634A3 /* MyHeaderView.swift */; };
@@ -110,6 +114,10 @@
 		04D5085E219A84B6005DE338 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D50866219AB363005DE338 /* MyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
 		04D7F5A621C344D1000CC40E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		04DB9DE021DEF3E500BF5AF7 /* RelationRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationRecommendView.swift; sourceTree = "<group>"; };
+		04DB9DE221DEF40400BF5AF7 /* RelationRecommendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelationRecommendView.xib; sourceTree = "<group>"; };
+		04DB9DE421DF041200BF5AF7 /* RelationRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationRecommendCell.swift; sourceTree = "<group>"; };
+		04DB9DE521DF041200BF5AF7 /* RelationRecommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelationRecommendCell.xib; sourceTree = "<group>"; };
 		04DE2CAF21B620C200D634A3 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		04DE2CB121B620C200D634A3 /* MyCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
 		04DE2CB321B620C200D634A3 /* MyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
@@ -418,6 +426,10 @@
 				04E2192B21DC5AF00069D776 /* UserDetailBottomView.swift */,
 				04E6C79921DDAC8D00DE8D56 /* NavigationBarView.swift */,
 				04E6C79B21DDACB300DE8D56 /* NavigationBarView.xib */,
+				04DB9DE021DEF3E500BF5AF7 /* RelationRecommendView.swift */,
+				04DB9DE221DEF40400BF5AF7 /* RelationRecommendView.xib */,
+				04DB9DE421DF041200BF5AF7 /* RelationRecommendCell.swift */,
+				04DB9DE521DF041200BF5AF7 /* RelationRecommendCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -592,6 +604,7 @@
 				04DEA1E421B5294800B05143 /* default_theme.plist in Resources */,
 				04DEA1E621B5295C00B05143 /* night_theme.plist in Resources */,
 				0490070C21C74D3D00A32718 /* UserDetailViewController.xib in Resources */,
+				04DB9DE721DF041200BF5AF7 /* RelationRecommendCell.xib in Resources */,
 				04E6C79C21DDACB300DE8D56 /* NavigationBarView.xib in Resources */,
 				04DE2CC021B620C300D634A3 /* MyOtherCell.xib in Resources */,
 				04E2193221DC8E590069D776 /* UserDetailBottomPopController.storyboard in Resources */,
@@ -601,6 +614,7 @@
 				04DE2CC821B6641E00D634A3 /* MoreLoginViewController.storyboard in Resources */,
 				04DEA29B21BE083200E58D78 /* SettingCell.xib in Resources */,
 				04DE2CC121B620C300D634A3 /* MyConcernCell.xib in Resources */,
+				04DB9DE321DEF40400BF5AF7 /* RelationRecommendView.xib in Resources */,
 				04DE2CBF21B620C300D634A3 /* MyHeaderView.xib in Resources */,
 				04DE2CC221B620C300D634A3 /* MyFirstScetionCell.xib in Resources */,
 			);
@@ -697,6 +711,7 @@
 				04E2192E21DC8C940069D776 /* UserDetailBottomPushController.swift in Sources */,
 				04D50862219A84B6005DE338 /* AppDelegate.swift in Sources */,
 				04D3444221C23E3A007B08B7 /* HomeNewsTitle.swift in Sources */,
+				04DB9DE621DF041200BF5AF7 /* RelationRecommendCell.swift in Sources */,
 				04DE2CBC21B620C300D634A3 /* MyCellModel.swift in Sources */,
 				046EB0CA21C39F0900E1EE52 /* SQLiteManager.swift in Sources */,
 				04EC939A21B1119100440FB0 /* UIView+Extension.swift in Sources */,
@@ -719,6 +734,7 @@
 				0490070E21C7503700A32718 /* UserDetailHeader.swift in Sources */,
 				04DE2CC321B620C300D634A3 /* MyOtherCell.swift in Sources */,
 				04EC939C21B1125900440FB0 /* UITableView+Extension.swift in Sources */,
+				04DB9DE121DEF3E500BF5AF7 /* RelationRecommendView.swift in Sources */,
 				04E2193021DC8E460069D776 /* UserDetailBottomPopController.swift in Sources */,
 				04EC939E21B1141B00440FB0 /* UICollectionView+Extension.swift in Sources */,
 				04DE2CBB21B620C200D634A3 /* MineViewController.swift in Sources */,

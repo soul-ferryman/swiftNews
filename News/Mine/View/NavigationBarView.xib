@@ -40,6 +40,28 @@
                                 <action selector="moreButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="39h-Ok-QgD"/>
                             </connections>
                         </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skc-eI-bdC">
+                            <rect key="frame" x="152.5" y="11.5" width="70" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUV-1e-5P4" customClass="AnimatableButton" customModule="IBAnimatable">
+                            <rect key="frame" x="232.5" y="8" width="72" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.90196078430000004" green="0.3921568627" blue="0.37254901959999998" alpha="1" colorSpace="deviceRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="关注"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="concernButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Uwm-kP-q48"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
@@ -47,7 +69,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="concernButton" destination="pUV-1e-5P4" id="xvF-BN-Q4C"/>
                 <outlet property="moreButton" destination="l7p-CD-ePG" id="JCC-YI-scu"/>
+                <outlet property="nameLabel" destination="Skc-eI-bdC" id="TqP-8P-qX8"/>
                 <outlet property="navigetionBar" destination="Qdp-hV-kcC" id="Pbs-N9-LSH"/>
                 <outlet property="returnButton" destination="dFc-ST-KGb" id="3FT-SZ-J5T"/>
                 <outlet property="statusBarView" destination="YPb-qv-lNy" id="lse-Qe-vxZ"/>

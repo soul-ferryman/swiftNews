@@ -17,10 +17,7 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     @IBOutlet weak var bottomViewBotton: NSLayoutConstraint!
     
-    /// 改变状态栏的字体颜色
-    var changeStatusBarStyle: UIStatusBarStyle = .lightContent {
-        didSet { setNeedsStatusBarAppearanceUpdate() }
-    }
+    
     
     
     var userId:Int = 0
@@ -45,6 +42,11 @@ class UserDetailViewController: UIViewController {
         return .lightContent
     }
     
+    /// 改变状态栏的字体颜色
+    var changeStatusBarStyle: UIStatusBarStyle = .lightContent {
+        didSet { setNeedsStatusBarAppearanceUpdate() }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,6 +63,7 @@ class UserDetailViewController: UIViewController {
         NetworkTool.loadUserDetail(user_id: userId) { (userDetail) in
             self.userDetail = userDetail
             self.headerView.userDetail = userDetail
+            self.navigationView.userDetail = userDetail
             if userDetail.bottom_tab.count == 0 {
                 self.bottomViewBotton.constant = 0
                 self.headerView.layoutIfNeeded()
@@ -88,6 +91,10 @@ class UserDetailViewController: UIViewController {
     
     fileprivate lazy var navigationView:NavigationBarView = {
         let navigationView = NavigationBarView.loadViewFromeNib()
+       
+        navigationView.goBackClicked = {
+            self.navigationController?.popViewController(animated: true)
+        }
         return navigationView
     }()
     
@@ -118,6 +125,26 @@ extension UserDetailViewController:UIScrollViewDelegate {
                 changeStatusBarStyle = .lightContent
                 navigationView.returnButton.theme_setImage("images.personal_home_back_white_24x24_", forState: .normal)
                 navigationView.moreButton.theme_setImage("images.new_morewhite_titlebar_22x22_", forState: .normal)
+            }
+            
+            var alphaNavItem:CGFloat = offsetY/57
+            
+            
+            //14+15+14
+            if offsetY >= 43 {
+                
+                alphaNavItem = min(alphaNavItem, 1.0)
+                navigationView.concernButton.isHidden = false
+                navigationView.nameLabel.isHidden = false
+                navigationView.concernButton.alpha = alphaNavItem
+                navigationView.nameLabel.alpha = alphaNavItem
+                navigationView.nameLabel.textColor = UIColor(r: 0, g: 0, b: 0, alpha: alphaNavItem)
+                
+            }else {
+                alphaNavItem = min(0.0, alphaNavItem)
+                navigationView.nameLabel.alpha = alphaNavItem
+                navigationView.nameLabel.textColor = UIColor(r: 0, g: 0, b: 0, alpha: alphaNavItem)
+                navigationView.concernButton.alpha = alphaNavItem
             }
             
             
